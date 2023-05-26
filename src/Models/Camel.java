@@ -58,7 +58,7 @@ public class Camel extends PackAnimal {
 	}
 	
 	@Override
-	protected void work() throws RuntimeException{
+	public void work() throws RuntimeException{
 		if (stockInTheHump < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'stockInTheHump'", new Throwable());
 		} else if (amountOfSaliva < 0) {

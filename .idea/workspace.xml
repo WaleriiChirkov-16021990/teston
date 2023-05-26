@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForCamelExtends.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForDonkeyExtends.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForHorseExtends.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Pet/CommandForCatExtends.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Pet/CommandForDogExtends.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Pet/CommandForHamsterExtends.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/ConsolePrinter.java" afterDir="false" />
+    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="остановился на хомяке,&#10;много идей но мало времени для реализации.">
+      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AnimalAssociation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/Counter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/DeleteAnimal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/Nursery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForCamelExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForCamelExtends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForHorseExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForHorseExtends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Pet/CommandForHamsterExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Pet/CommandForHamsterExtends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Abstract/HumanFriend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Abstract/HumanFriend.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/Camel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Camel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Hamster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Hamster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Horse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +44,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "create.test.in.the.same.root": "true",
-    "settings.editor.selected.configurable": "copyright"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Валерий Чирков\IdeaProjects\final_teston\iDiagram" />
@@ -73,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685037014133</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="остановился на хомяке,&#10;много идей но мало времени для реализации.">
+      <created>1685049119652</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685049119652</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,6 +97,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="остановился на хомяке,&#10;много идей но мало времени для реализации." />
+    <option name="LAST_COMMIT_MESSAGE" value="остановился на хомяке,&#10;много идей но мало времени для реализации." />
   </component>
 </project>

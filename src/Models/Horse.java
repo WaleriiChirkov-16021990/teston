@@ -1,6 +1,65 @@
 package Models;
 
+import BusinessLogic.PackAnimals.CommandForHorseExtends;
 import Models.Abstract.PackAnimal;
+import View.ConsolePrinter;
+
+import java.util.Date;
 
 public class Horse extends PackAnimal {
+	private int impactForce;
+	private int biteForce;
+	
+	private final int ENERGY_СONSUMPTION = 5;
+	
+	public Horse(int liftingWeight, int impactForce, int biteForce) {
+		super(liftingWeight);
+		this.impactForce = impactForce;
+		this.biteForce = biteForce;
+	}
+	
+	public Horse(String name, Date birthDay, int energy, int weight, Type type, int liftingWeight, int impactForce, int biteForce) {
+		super(name, birthDay, energy, weight, type, liftingWeight);
+		this.impactForce = impactForce;
+		this.biteForce = biteForce;
+	}
+	
+	public int getENERGY_СONSUMPTION() {
+		return ENERGY_СONSUMPTION;
+	}
+	
+	public int getImpactForce() {
+		return impactForce;
+	}
+	
+	public void setImpactForce(int impactForce) {
+		this.impactForce = impactForce;
+	}
+	
+	public int getBiteForce() {
+		return biteForce;
+	}
+	
+	public void setBiteForce(int biteForce) {
+		this.biteForce = biteForce;
+	}
+	
+	@Override
+	protected void work() {
+		if (impactForce < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'stockInTheHump'", new Throwable());
+		} else if (biteForce < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'amountOfSaliva'", new Throwable());
+		} else if ((impactForce - ENERGY_СONSUMPTION) <= 0) {
+			ConsolePrinter.print("Верблюд на последнем издыхании, он чуствует что не переживет данную экскурсию без воды, еды или сна!");
+			if ((biteForce - ENERGY_СONSUMPTION) >= 0) {
+				new CommandForHorseExtends<Horse>(this).bite();
+				setImpactForce(getBiteForce()-ENERGY_СONSUMPTION);
+			} else {
+				ConsolePrinter.print("Лошадь упала от истощения");
+			}
+		}
+		ConsolePrinter.print("Красавица лошадь вас лягнула.");
+		setImpactForce(getImpactForce() - ENERGY_СONSUMPTION);
+	}
 }

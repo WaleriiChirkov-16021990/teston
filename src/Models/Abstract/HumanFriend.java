@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public abstract class HumanFriend {
-	
+	protected static int countAnimals = 0;
 	private String name;
 	private Date birthDay;
 	private int energy;
@@ -15,6 +15,7 @@ public abstract class HumanFriend {
 	private Type type;
 	
 	public HumanFriend() {
+		countAnimals += 1;
 	}
 	
 	public HumanFriend(String name, Date birthDay, int energy, int weight, Type type) {
@@ -23,6 +24,7 @@ public abstract class HumanFriend {
 		this.energy = energy;
 		this.weight = weight;
 		this.type = type;
+		countAnimals +=1;
 	}
 	
 	public String getName() {
