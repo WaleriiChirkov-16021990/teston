@@ -4,10 +4,12 @@ import Models.Abstract.PackAnimal;
 import View.ConsolePrinter;
 
 import java.util.Date;
+import java.util.Map;
 
 public class Camel extends PackAnimal {
 	private int stockInTheHump;
 	private int amountOfSaliva;
+	private Map<String,String> studiedСommands;
 	private final int ENERGY_СONSUMPTION = 5;
 	private final int SPITTING_VOLUME = 5;
 	
@@ -15,14 +17,24 @@ public class Camel extends PackAnimal {
 		super(liftingWeight);
 		this.stockInTheHump = stockInTheHump;
 		this.amountOfSaliva = amountOfSaliva;
+		this.studiedСommands = Map.of("Chew Thorns","Верблюд жует колючки =)", "spit", "Верблюд плюнул вам на лицо");
 	}
 	
 	public Camel(String name, Date birthDay, int energy, int weight, Type type, int liftingWeight, int stockInTheHump, int amountOfSaliva) {
 		super(name, birthDay, energy, weight, type, liftingWeight);
 		this.stockInTheHump = stockInTheHump;
 		this.amountOfSaliva = amountOfSaliva;
+		this.studiedСommands = Map.of("Chew Thorns","Верблюд жует колючки =)", "spit", "Верблюд плюнул вам на лицо");
+		
 	}
 	
+	public Map<String, String> getStudiedСommands() {
+		return studiedСommands;
+	}
+	
+	public void setStudiedСommands(Map<String, String> studiedСommands) {
+		this.studiedСommands = studiedСommands;
+	}
 	
 	public int getENERGY_СONSUMPTION() {
 		return ENERGY_СONSUMPTION;

@@ -18,6 +18,8 @@ public class CommandForCamelExtends<T extends Camel> {
 	}
 	
 	protected <T extends Camel> void chewThrons(T animals) {
-	
+		animals.setStockInTheHump(animals.getStockInTheHump()+animals.getENERGY_СONSUMPTION() * 6);
+		animals.setEnergy(animals.getEnergy()+animals.getENERGY_СONSUMPTION() * 4);
+		ConsolePrinter.print("Верблюд пополнил свои запасы и энергию 'ци'");
 	}
 }

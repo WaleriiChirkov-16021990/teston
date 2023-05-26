@@ -21,7 +21,7 @@ public class CommandForHorseExtends <T extends Horse> {
 		this.animal = animal;
 	}
 	
-	public void bite() {
+	public void bite() throws RuntimeException{
 		if (animal.getBiteForce() < 0) {
 			throw new RuntimeException("Ошибка параметра biteForce", new Throwable());
 		}

@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="остановился на хомяке,&#10;много идей но мало времени для реализации.">
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AnimalAssociation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/Counter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/DeleteAnimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Nursery.java" afterDir="false" />
+    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="продолжил как ни странно с лошади, хомяка пока не трогал">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForCamelExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForCamelExtends.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForHorseExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForHorseExtends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Pet/CommandForHamsterExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Pet/CommandForHamsterExtends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Abstract/HumanFriend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Abstract/HumanFriend.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/Camel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Camel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Horse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685049119652</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="продолжил как ни странно с лошади, хомяка пока не трогал">
+      <created>1685130032606</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685130032606</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +98,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="остановился на хомяке,&#10;много идей но мало времени для реализации." />
-    <option name="LAST_COMMIT_MESSAGE" value="остановился на хомяке,&#10;много идей но мало времени для реализации." />
+    <MESSAGE value="продолжил как ни странно с лошади, хомяка пока не трогал" />
+    <option name="LAST_COMMIT_MESSAGE" value="продолжил как ни странно с лошади, хомяка пока не трогал" />
   </component>
 </project>
