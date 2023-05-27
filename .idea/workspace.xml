@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="дописал класс &quot;public class Dog.java&quot; &amp; public class &#10;&quot;CommandForDogExtends.java&quot;">
+    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="подготовил модели">
+      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateNewAnimal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForCamelExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForCamelExtends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForHorseExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForHorseExtends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Pet/CommandForDogExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Pet/CommandForDogExtends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Pet/CommandForHamsterExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Pet/CommandForHamsterExtends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Camel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Camel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Horse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Animals/Pet/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/Pet/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Animals/Pet/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/Pet/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Animals/Pet/Hamster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/Pet/Hamster.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685192205716</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="подготовил модели">
+      <created>1685197153029</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685197153029</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +136,7 @@
     <MESSAGE value="дописал класс ослика и лошади, подправил метод work()&#10;для public class Camel.java" />
     <MESSAGE value="дописал класс &quot;public class Cat.java&quot;" />
     <MESSAGE value="дописал класс &quot;public class Dog.java&quot; &amp; public class &#10;&quot;CommandForDogExtends.java&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="дописал класс &quot;public class Dog.java&quot; &amp; public class &#10;&quot;CommandForDogExtends.java&quot;" />
+    <MESSAGE value="подготовил модели" />
+    <option name="LAST_COMMIT_MESSAGE" value="подготовил модели" />
   </component>
 </project>
