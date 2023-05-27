@@ -38,7 +38,7 @@ public class Cat extends Pet {
 	}
 	
 	@Override
-	public void toPlay() throws RuntimeException{
+	public void toPlay() throws RuntimeException {
 		if (getLoves() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'loves'", new Throwable());
 		} else if (getName().equalsIgnoreCase("")) {
@@ -49,7 +49,11 @@ public class Cat extends Pet {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'weight'", new Throwable());
 		}
 		ConsolePrinter.print("Вы довольный играете с котиком");
-		setLoves( getLoves() * 2 );
+		if (getWhoIsHePlayingWith() == "Valeriy") {
+			setLoves(getLoves() * 3);
+		} else {
+			setLoves(getLoves() * 2);
+		}
 		if (getLoves() >= 100) {
 			new CommandForCatExtends<Cat>(this).scratch();
 		}

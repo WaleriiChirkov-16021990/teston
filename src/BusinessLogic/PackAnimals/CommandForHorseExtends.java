@@ -30,6 +30,8 @@ public class CommandForHorseExtends <T extends Horse> {
 			throw new RuntimeException("Ошибка параметра 'liftingWeight' лошади "  + animal.getName(), new Throwable());
 		} else if (animal.getImpactForce() < 0) {
 			throw new RuntimeException("Ошибка параметра 'impactForce' лошади"  + animal.getName(), new Throwable());
+		} else if (animal.getWeight() < 0) {
+			throw new RuntimeException("Ошибка параметра 'weight' лошади"  + animal.getName(), new Throwable());
 		} else if (animal.getBiteForce() - animal.getENERGY_СONSUMPTION() >= 0) {
 			ConsolePrinter.print("Лошадь вас укусила");
 			animal.setBiteForce(animal.getBiteForce() - animal.getENERGY_СONSUMPTION());

@@ -1,5 +1,6 @@
 package Models.Animals.PackAnimals;
 
+import BusinessLogic.PackAnimals.CommandForCamelExtends;
 import Models.Abstract.Animals.PackAnimal;
 import Models.Animals.Type;
 import View.ConsolePrinter;
@@ -66,9 +67,9 @@ public class Camel extends PackAnimal {
 		ConsolePrinter.print("Верблюд тебе благодарен!");
 	}
 	
-	public void spit() {
-		ConsolePrinter.print("Вы получили плевок в лицо от этого гордого живого существа!");
-	}
+//	public void spit() {
+//		ConsolePrinter.print("Вы получили плевок в лицо от этого гордого живого существа!");
+//	}
 	
 	@Override
 	public void work() throws RuntimeException {
@@ -76,10 +77,16 @@ public class Camel extends PackAnimal {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'stockInTheHump'", new Throwable());
 		} else if (amountOfSaliva < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'amountOfSaliva'", new Throwable());
+		} else if (getEnergy() < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'amountOfSaliva'", new Throwable());
+		} else if (getLiftingWeight() < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'amountOfSaliva'", new Throwable());
+		} else if (getWeight() < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'amountOfSaliva'", new Throwable());
 		} else if ((stockInTheHump - ENERGY_СONSUMPTION) <= 0) {
 			ConsolePrinter.print("Верблюд на последнем издыхании, он чуствует что не переживет данную экскурсию без воды, еды или сна!");
 			if ((amountOfSaliva - SPITTING_VOLUME) >= 0) {
-				spit();
+				new CommandForCamelExtends<Camel>().spit(this);
 				setAmountOfSaliva(getAmountOfSaliva() - SPITTING_VOLUME);
 			} else {
 				ConsolePrinter.print("Верблюд упал от истощения");

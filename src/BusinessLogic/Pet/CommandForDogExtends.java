@@ -3,14 +3,14 @@ package BusinessLogic.Pet;
 import Models.Animals.Pet.Dog;
 import View.ConsolePrinter;
 
-public class CommandForDogExtends <T extends Dog> {
+public class CommandForDogExtends<T extends Dog> {
 	public T animal;
 	
 	public CommandForDogExtends(T animal) {
 		this.animal = animal;
 	}
 	
-	public <T> void bite() throws RuntimeException{
+	public <T> void bite() throws RuntimeException {
 		if (animal.getLoves() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'loves'", new Throwable());
 		} else if (animal.getName().equalsIgnoreCase("")) {
@@ -19,12 +19,14 @@ public class CommandForDogExtends <T extends Dog> {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'energy'", new Throwable());
 		} else if (animal.getWeight() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'weight'", new Throwable());
+		} else if (animal.getIntelligence() <= 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'intelligence'", new Throwable());
 		}
 		ConsolePrinter.print("Собачка вас укусила.");
-		animal.setLoves(animal.getLoves()/2);
+		animal.setLoves(animal.getLoves() / 2);
 		animal.setIntelligence(animal.getIntelligence() - 1);
 		animal.setEnergy(animal.getEnergy() - 3);
-		if (animal.getIntelligence() < 0) animal.setIntelligence(0);
+		if (animal.getIntelligence() < 0) animal.setIntelligence(2);
 		if (animal.getEnergy() < 0) animal.setEnergy(1);
 	}
 	

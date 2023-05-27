@@ -60,9 +60,15 @@ public class Horse extends PackAnimal {
 	@Override
 	protected void work() throws RuntimeException  {
 		if (impactForce < 0) {
-			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'stockInTheHump'", new Throwable());
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'impactForce'", new Throwable());
 		} else if (biteForce < 0) {
-			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'amountOfSaliva'", new Throwable());
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'bitForce'", new Throwable());
+		} else if (getEnergy() < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'energy'", new Throwable());
+		} else if (getWeight() < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'weight'", new Throwable());
+		} else if (getLiftingWeight() <= 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'liftingWeight'", new Throwable());
 		} else if ((impactForce - ENERGY_СONSUMPTION) <= 0) {
 			ConsolePrinter.print("Лошадь чуствует что не переживет данную работу без воды, еды и сна!");
 			if ((biteForce - ENERGY_СONSUMPTION) >= 0) {

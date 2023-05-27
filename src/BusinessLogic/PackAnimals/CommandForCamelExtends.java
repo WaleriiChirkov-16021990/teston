@@ -10,7 +10,7 @@ public class CommandForCamelExtends<T extends Camel> {
 		animal.work();
 	}
 	
-	protected <T extends Camel> void spit(T animal) throws RuntimeException {
+	public <T extends Camel> void spit(T animal) throws RuntimeException {
 		if (animal.getEnergy() < 0) {
 			throw new RuntimeException("Не правильная инициализация верблюда " + animal.getName(), new Throwable());
 		} else if (animal.getStockInTheHump() < 0) {
@@ -18,6 +18,8 @@ public class CommandForCamelExtends<T extends Camel> {
 		} else if (animal.getWeight() < 0) {
 			throw new RuntimeException("Не правильная инициализация верблюда "  + animal.getName(), new Throwable());
 		} else if (animal.getLiftingWeight() < 0) {
+			throw new RuntimeException("Не правильная инициализация верблюда "  + animal.getName(), new Throwable());
+		} else if (animal.getAmountOfSaliva() < 0) {
 			throw new RuntimeException("Не правильная инициализация верблюда "  + animal.getName(), new Throwable());
 		}
 		if (animal.getAmountOfSaliva() - animal.getSPITTING_VOLUME() >= 0) {

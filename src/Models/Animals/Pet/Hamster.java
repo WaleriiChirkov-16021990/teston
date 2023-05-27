@@ -5,18 +5,32 @@ import Models.Animals.Type;
 import View.ConsolePrinter;
 
 import java.util.Date;
+import java.util.Map;
 
 public class Hamster extends Pet {
 	
 	private int timeMaxRun;
 	private int distanceRun;
 	
+	private Map<String, String> studiedСommands;
+	
 	public Hamster(String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy) {
 		super(whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
+		this.studiedСommands = Map.of("Run", "Хомяк даёт жару в колесе!");
+		
 	}
 	
 	public Hamster(String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy) {
 		super(name, birthDay, energy, weight, type, whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
+		this.studiedСommands = Map.of("Run", "Хомяк даёт жару в колесе!");
+	}
+	
+	public Map<String, String> getStudiedСommands() {
+		return studiedСommands;
+	}
+	
+	public void setStudiedСommands(Map<String, String> studiedСommands) {
+		this.studiedСommands = studiedСommands;
 	}
 	
 	public int getENERGY_СONSUMPTION() {
@@ -44,7 +58,26 @@ public class Hamster extends Pet {
 	}
 	
 	@Override
-	public void toPlay() {
+	public void toPlay() throws RuntimeException {
+		if (getLoves() < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'loves'", new Throwable());
+		} else if (getName().equalsIgnoreCase("")) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'name'", new Throwable());
+		} else if (getEnergy() < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'energy'", new Throwable());
+		} else if (getWeight() < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'weight'", new Throwable());
+		} else if (getDistanceRun() < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'distanceRun'", new Throwable());
+		} else if (getTimeMaxRun() < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'timeMaxRun'", new Throwable());
+		}
 		ConsolePrinter.print("Хомяк стоит и смотрит на тебя своими черными глазами");
+		if (getWhoIsHePlayingWith() == "Valeriy") {
+			setLoves(getLoves() + 8);
+		} else {
+			setLoves(getLoves() + 5);
+		}
+		
 	}
 }

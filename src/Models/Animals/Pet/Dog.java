@@ -14,14 +14,14 @@ public class Dog extends Pet {
 	public Dog(String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy, int intelligence) {
 		super(whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
 		this.intelligence = intelligence;
-		this.studiedСommands = Map.of("Execute the command", "собака выполняет команды", "Bite","Собака вас укусила");
+		this.studiedСommands = Map.of("Execute the command", "собака выполняет команды", "Bite", "Собака вас укусила");
 		
 	}
 	
 	public Dog(String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy, int intelligence) {
 		super(name, birthDay, energy, weight, type, whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
 		this.intelligence = intelligence;
-		this.studiedСommands = Map.of("Execute the command", "собака выполняет команды", "Bite","Собака вас укусила");
+		this.studiedСommands = Map.of("Execute the command", "собака выполняет команды", "Bite", "Собака вас укусила");
 	}
 	
 	public Map<String, String> getStudiedСommands() {
@@ -41,7 +41,7 @@ public class Dog extends Pet {
 	}
 	
 	@Override
-	public void toPlay() throws RuntimeException{
+	public void toPlay() throws RuntimeException {
 		if (getLoves() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'loves'", new Throwable());
 		} else if (getName().equalsIgnoreCase("")) {
@@ -50,13 +50,16 @@ public class Dog extends Pet {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'energy'", new Throwable());
 		} else if (getWeight() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'weight'", new Throwable());
+		} else if (getIntelligence() < 0) {
+			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'intelligence'", new Throwable());
 		}
 		ConsolePrinter.print("Вы играете с этим счастливым щенком!");
 		if (getWhoIsHePlayingWith() == "Valeriy") {
 			setIntelligence(getIntelligence() * 3);
 			setLoves(getLoves() * 3);
+		} else {
+			setIntelligence(getIntelligence() * 2);
+			setLoves(getLoves() * 2);
 		}
-		setIntelligence(getIntelligence() * 2);
-		setLoves(getLoves() * 2);
 	}
 }
