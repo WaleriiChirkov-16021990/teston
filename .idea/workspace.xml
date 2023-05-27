@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="продолжил как ни странно с лошади, хомяка пока не трогал">
+    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="начал описывать список команд верблюда">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForCamelExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForCamelExtends.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForHorseExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForHorseExtends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForDonkeyExtends.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/PackAnimals/CommandForDonkeyExtends.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Models/Camel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Camel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Donkey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Donkey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Horse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685130032606</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="начал описывать список команд верблюда">
+      <created>1685133213410</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685133213410</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +106,7 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="остановился на хомяке,&#10;много идей но мало времени для реализации." />
     <MESSAGE value="продолжил как ни странно с лошади, хомяка пока не трогал" />
-    <option name="LAST_COMMIT_MESSAGE" value="продолжил как ни странно с лошади, хомяка пока не трогал" />
+    <MESSAGE value="начал описывать список команд верблюда" />
+    <option name="LAST_COMMIT_MESSAGE" value="начал описывать список команд верблюда" />
   </component>
 </project>

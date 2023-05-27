@@ -9,7 +9,7 @@ import java.util.Map;
 public class Camel extends PackAnimal {
 	private int stockInTheHump;
 	private int amountOfSaliva;
-	private Map<String,String> studiedСommands;
+	private Map<String, String> studiedСommands;
 	private final int ENERGY_СONSUMPTION = 5;
 	private final int SPITTING_VOLUME = 5;
 	
@@ -17,14 +17,14 @@ public class Camel extends PackAnimal {
 		super(liftingWeight);
 		this.stockInTheHump = stockInTheHump;
 		this.amountOfSaliva = amountOfSaliva;
-		this.studiedСommands = Map.of("Chew Thorns","Верблюд жует колючки =)", "spit", "Верблюд плюнул вам на лицо");
+		this.studiedСommands = Map.of("Chew Thorns", "Верблюд жует колючки =)", "spit", "Верблюд плюнул вам на лицо");
 	}
 	
 	public Camel(String name, Date birthDay, int energy, int weight, Type type, int liftingWeight, int stockInTheHump, int amountOfSaliva) {
 		super(name, birthDay, energy, weight, type, liftingWeight);
 		this.stockInTheHump = stockInTheHump;
 		this.amountOfSaliva = amountOfSaliva;
-		this.studiedСommands = Map.of("Chew Thorns","Верблюд жует колючки =)", "spit", "Верблюд плюнул вам на лицо");
+		this.studiedСommands = Map.of("Chew Thorns", "Верблюд жует колючки =)", "spit", "Верблюд плюнул вам на лицо");
 		
 	}
 	
@@ -70,7 +70,7 @@ public class Camel extends PackAnimal {
 	}
 	
 	@Override
-	public void work() throws RuntimeException{
+	public void work() throws RuntimeException {
 		if (stockInTheHump < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'stockInTheHump'", new Throwable());
 		} else if (amountOfSaliva < 0) {
@@ -79,12 +79,13 @@ public class Camel extends PackAnimal {
 			ConsolePrinter.print("Верблюд на последнем издыхании, он чуствует что не переживет данную экскурсию без воды, еды или сна!");
 			if ((amountOfSaliva - SPITTING_VOLUME) >= 0) {
 				spit();
-				setAmountOfSaliva(getAmountOfSaliva()-SPITTING_VOLUME);
+				setAmountOfSaliva(getAmountOfSaliva() - SPITTING_VOLUME);
 			} else {
 				ConsolePrinter.print("Верблюд упал от истощения");
 			}
+		} else {
+			ConsolePrinter.print("And again the camel took an excursion to the oasis!");
+			setStockInTheHump(getStockInTheHump() - ENERGY_СONSUMPTION);
 		}
-		ConsolePrinter.print("And again the camel took an excursion to the oasis!");
-		setStockInTheHump(getStockInTheHump() - ENERGY_СONSUMPTION);
 	}
 }
