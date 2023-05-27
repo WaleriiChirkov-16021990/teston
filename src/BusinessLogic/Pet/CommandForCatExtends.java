@@ -17,7 +17,7 @@ public class CommandForCatExtends <T extends Cat> {
 		this.animal = animal;
 	}
 	
-	public void scratch() {
+	public void scratch() throws RuntimeException{
 		if (animal.getLoves() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'loves'", new Throwable());
 		} else if (animal.getName().equalsIgnoreCase("")) {

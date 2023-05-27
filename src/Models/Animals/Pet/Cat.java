@@ -6,18 +6,31 @@ import Models.Animals.Type;
 import View.ConsolePrinter;
 
 import java.util.Date;
+import java.util.Map;
 
 public class Cat extends Pet {
 	private String color;
+	private Map<String, String> studiedСommands;
 	
 	public Cat(String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy, String color) {
 		super(whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
 		this.color = color;
+		this.studiedСommands = Map.of("Scratch", "котенок вас поцарапал");
+		
 	}
 	
 	public Cat(String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy, String color) {
 		super(name, birthDay, energy, weight, type, whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
 		this.color = color;
+		this.studiedСommands = Map.of("Scratch", "котенок вас поцарапал");
+	}
+	
+	public Map<String, String> getStudiedСommands() {
+		return studiedСommands;
+	}
+	
+	public void setStudiedСommands(Map<String, String> studiedСommands) {
+		this.studiedСommands = studiedСommands;
 	}
 	
 	public String getColor() {
@@ -25,7 +38,7 @@ public class Cat extends Pet {
 	}
 	
 	@Override
-	public void toPlay() {
+	public void toPlay() throws RuntimeException{
 		if (getLoves() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'loves'", new Throwable());
 		} else if (getName().equalsIgnoreCase("")) {
