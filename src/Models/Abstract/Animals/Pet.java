@@ -1,6 +1,6 @@
-package Models.Abstract;
+package Models.Abstract.Animals;
 
-import Models.Type;
+import Models.Animals.Type;
 
 import java.util.Date;
 

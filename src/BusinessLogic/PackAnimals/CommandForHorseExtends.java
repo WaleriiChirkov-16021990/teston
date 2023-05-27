@@ -1,6 +1,6 @@
 package BusinessLogic.PackAnimals;
 
-import Models.Horse;
+import Models.Animals.PackAnimals.Horse;
 import View.ConsolePrinter;
 
 public class CommandForHorseExtends <T extends Horse> {
@@ -23,9 +23,14 @@ public class CommandForHorseExtends <T extends Horse> {
 	
 	public void bite() throws RuntimeException{
 		if (animal.getBiteForce() < 0) {
-			throw new RuntimeException("Ошибка параметра biteForce", new Throwable());
-		}
-		if (animal.getBiteForce() - animal.getENERGY_СONSUMPTION() >= 0) {
+			throw new RuntimeException("Ошибка параметра biteForce лошади "  + animal.getName(), new Throwable());
+		} else if (animal.getEnergy() < 0) {
+			throw new RuntimeException("Ошибка параметра 'energy' лошади "  + animal.getName(), new Throwable());
+		} else if (animal.getLiftingWeight() < 0) {
+			throw new RuntimeException("Ошибка параметра 'liftingWeight' лошади "  + animal.getName(), new Throwable());
+		} else if (animal.getImpactForce() < 0) {
+			throw new RuntimeException("Ошибка параметра 'impactForce' лошади"  + animal.getName(), new Throwable());
+		} else if (animal.getBiteForce() - animal.getENERGY_СONSUMPTION() >= 0) {
 			ConsolePrinter.print("Лошадь вас укусила");
 			animal.setBiteForce(animal.getBiteForce() - animal.getENERGY_СONSUMPTION());
 		} else {

@@ -1,6 +1,6 @@
 package BusinessLogic.Pet;
 
-import Models.Hamster;
+import Models.Animals.Pet.Hamster;
 import View.ConsolePrinter;
 
 public class CommandForHamsterExtends<T extends Hamster> {

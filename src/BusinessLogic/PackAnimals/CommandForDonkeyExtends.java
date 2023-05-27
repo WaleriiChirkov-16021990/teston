@@ -1,6 +1,6 @@
 package BusinessLogic.PackAnimals;
 
-import Models.Donkey;
+import Models.Animals.PackAnimals.Donkey;
 import View.ConsolePrinter;
 
 public class CommandForDonkeyExtends<T extends Donkey> {
@@ -30,11 +30,13 @@ public class CommandForDonkeyExtends<T extends Donkey> {
 	
 	public <T> void walk() throws RuntimeException {
 		if (this.animal.getStubbornness() < 0) {
-			throw new RuntimeException("Не правильная инициализация ослика!");
+			throw new RuntimeException("Не правильная инициализация ослика "  + animal.getName()  );
 		} else if (this.animal.getEnergy() < 0) {
-			throw new RuntimeException("Не правильная инициализация ослика!");
+			throw new RuntimeException("Не правильная инициализация ослика "  + animal.getName());
 		} else if (this.animal.getLiftingWeight() < 0) {
-			throw new RuntimeException("Не правильная инициализация ослика!");
+			throw new RuntimeException("Не правильная инициализация ослика "  + animal.getName());
+		} else if (this.animal.getWeight() <= 0) {
+			throw new RuntimeException("Не правильная инициализация ослика "  + animal.getName());
 		} else if (this.animal.getStubbornness() > 100) {
 			ConsolePrinter.print("Ослик уже настолько упрям что не пошел гулять!");
 		} else {

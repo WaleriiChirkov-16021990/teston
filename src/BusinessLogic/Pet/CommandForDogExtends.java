@@ -1,6 +1,6 @@
 package BusinessLogic.Pet;
 
-import Models.Dog;
+import Models.Animals.Pet.Dog;
 
 public class CommandForDogExtends <T extends Dog> {
 }

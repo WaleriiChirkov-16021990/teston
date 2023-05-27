@@ -1,9 +1,9 @@
 package BusinessLogic.Nursery;
 
-import Models.Abstract.HumanFriend;
-import Models.Nursery;
+import Models.Abstract.Animals.HumanFriend;
+import Models.Nursery.NurseryOne.NurseryOne;
 
-public class AddNewAnimal <T extends Nursery<HumanFriend>> {
+public class AddNewAnimal <T extends NurseryOne<HumanFriend>> {
 	private HumanFriend animal;
 	private T nusery;
 	

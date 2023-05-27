@@ -1,18 +1,19 @@
-package Models;
+package Models.Nursery.NurseryOne;
 
-import Models.Abstract.HumanFriend;
+import Models.Abstract.Animals.HumanFriend;
+import Models.Animals.Type;
 
 import java.util.ArrayList;
 import java.util.Map;
 
-public class Nursery <T extends HumanFriend> {
+public class NurseryOne<T extends HumanFriend> {
 	private Map<Type,Map<T,ArrayList<T>>> allAnimals;
 	
-	public Nursery(Map<Type,Map<T, ArrayList<T>>> animals) {
+	public NurseryOne(Map<Type,Map<T, ArrayList<T>>> animals) {
 		this.allAnimals = animals;
 	}
 	
-	public Nursery() {
+	public NurseryOne() {
 	}
 	
 	public Map<Type, Map<T,ArrayList<T>>> getAllAnimals() {

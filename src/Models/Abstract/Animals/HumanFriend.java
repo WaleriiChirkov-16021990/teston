@@ -1,9 +1,8 @@
-package Models.Abstract;
+package Models.Abstract.Animals;
 
-import Models.Type;
+import Models.Animals.Type;
 
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Objects;
 
 public abstract class HumanFriend {

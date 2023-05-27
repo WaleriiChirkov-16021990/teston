@@ -1,7 +1,8 @@
-package Models;
+package Models.Animals.PackAnimals;
 
 import BusinessLogic.PackAnimals.CommandForHorseExtends;
-import Models.Abstract.PackAnimal;
+import Models.Abstract.Animals.PackAnimal;
+import Models.Animals.Type;
 import View.ConsolePrinter;
 
 import java.util.Date;

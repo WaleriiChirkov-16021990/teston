@@ -1,6 +1,7 @@
-package Models;
+package Models.Animals.PackAnimals;
 
-import Models.Abstract.PackAnimal;
+import Models.Abstract.Animals.PackAnimal;
+import Models.Animals.Type;
 import View.ConsolePrinter;
 
 import java.util.Date;

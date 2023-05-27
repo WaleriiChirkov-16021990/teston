@@ -1,10 +1,10 @@
-package Models.Abstract;
+package Models.Abstract.Animals;
 
-import Models.Type;
+import Models.Animals.Type;
 
 import java.util.Date;
 
-public abstract class PackAnimal extends HumanFriend{
+public abstract class PackAnimal extends HumanFriend {
 	private int liftingWeight;
 	
 	
