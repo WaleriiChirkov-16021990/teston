@@ -2,7 +2,7 @@ package Models.Animals.Pet;
 
 import Models.Abstract.Animals.Pet;
 import Models.Animals.Type;
-import View.ConsolePrinter;
+import View.Consoles.ConsolePrinterOne;
 
 import java.util.Date;
 import java.util.Map;
@@ -14,14 +14,18 @@ public class Hamster extends Pet {
 	
 	private Map<String, String> studiedСommands;
 	
-	public Hamster(String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy) {
+	public Hamster(String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy, int timeMaxRun, int distanceRun) {
 		super(whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
+		this.timeMaxRun = timeMaxRun;
+		this.distanceRun = distanceRun;
 		this.studiedСommands = Map.of("Run", "Хомяк даёт жару в колесе!");
 		
 	}
 	
-	public Hamster(String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy) {
+	public Hamster(String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy, int timeMaxRun, int distanceRun) {
 		super(name, birthDay, energy, weight, type, whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
+		this.timeMaxRun = timeMaxRun;
+		this.distanceRun = distanceRun;
 		this.studiedСommands = Map.of("Run", "Хомяк даёт жару в колесе!");
 	}
 	
@@ -72,7 +76,7 @@ public class Hamster extends Pet {
 		} else if (getTimeMaxRun() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'timeMaxRun'", new Throwable());
 		}
-		ConsolePrinter.print("Хомяк стоит и смотрит на тебя своими черными глазами");
+		ConsolePrinterOne.print("Хомяк стоит и смотрит на тебя своими черными глазами");
 		if (getWhoIsHePlayingWith() == "Valeriy") {
 			setLoves(getLoves() + 8);
 		} else {

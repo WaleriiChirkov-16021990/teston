@@ -1,7 +1,7 @@
 package BusinessLogic.Pet;
 
 import Models.Animals.Pet.Hamster;
-import View.ConsolePrinter;
+import View.Consoles.ConsolePrinterOne;
 
 public class CommandForHamsterExtends<T extends Hamster> {
 	
@@ -19,11 +19,11 @@ public class CommandForHamsterExtends<T extends Hamster> {
 		} else if (animal.getTimeMaxRun() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'timeMaxRun'", new Throwable());
 		} else if ((animal.getEnergy() - animal.getENERGY_СONSUMPTION()) <= 0) {
-			ConsolePrinter.print("Этот щекастый зожник на последнем издыхании, он чуствует что не переживет данный спринт без воды, еды или сна!");
+			ConsolePrinterOne.print("Этот щекастый зожник на последнем издыхании, он чуствует что не переживет данный спринт без воды, еды или сна!");
 		} else {
 			animal.setEnergy(animal.getEnergy() - animal.getENERGY_СONSUMPTION());
 			if (animal.getEnergy() < 1) animal.setEnergy(5);
-			ConsolePrinter.print("Торнадо бежит в своём колесе!");
+			ConsolePrinterOne.print("Торнадо бежит в своём колесе!");
 		}
 	}
 }

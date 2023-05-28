@@ -2,7 +2,7 @@ package Models.Animals.Pet;
 
 import Models.Abstract.Animals.Pet;
 import Models.Animals.Type;
-import View.ConsolePrinter;
+import View.Consoles.ConsolePrinterOne;
 
 import java.util.Date;
 import java.util.Map;
@@ -53,7 +53,7 @@ public class Dog extends Pet {
 		} else if (getIntelligence() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'intelligence'", new Throwable());
 		}
-		ConsolePrinter.print("Вы играете с этим счастливым щенком!");
+		ConsolePrinterOne.print("Вы играете с этим счастливым щенком!");
 		if (getWhoIsHePlayingWith() == "Valeriy") {
 			setIntelligence(getIntelligence() * 3);
 			setLoves(getLoves() * 3);

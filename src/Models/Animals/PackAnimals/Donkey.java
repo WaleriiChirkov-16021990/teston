@@ -2,7 +2,7 @@ package Models.Animals.PackAnimals;
 
 import Models.Abstract.Animals.PackAnimal;
 import Models.Animals.Type;
-import View.ConsolePrinter;
+import View.Consoles.ConsolePrinterOne;
 
 import java.util.Date;
 import java.util.Map;
@@ -57,9 +57,9 @@ public class Donkey extends PackAnimal {
 		} else if (getWeight() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'weight'", new Throwable());
 		} else if (getStubbornness() > 100) {
-			ConsolePrinter.print("Ослик уже настолько упрям что не пойдет никуда!");
+			ConsolePrinterOne.print("Ослик уже настолько упрям что не пойдет никуда!");
 		} else {
-			ConsolePrinter.print("Счастливый ослик идет гулять");
+			ConsolePrinterOne.print("Счастливый ослик идет гулять");
 			setStubbornness(getStubbornness() - getENERGY_СONSUMPTION());
 			if (getStubbornness() < 0) setStubbornness(0);
 		}

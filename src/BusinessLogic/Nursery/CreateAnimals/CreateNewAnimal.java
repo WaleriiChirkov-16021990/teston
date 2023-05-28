@@ -1,15 +1,14 @@
 package BusinessLogic.Nursery.CreateAnimals;
 
+import BusinessLogic.Nursery.CreateAnimals.CreatePackAnimals.CreateNewCamel;
+import BusinessLogic.Nursery.CreateAnimals.CreatePackAnimals.CreateNewDonkey;
+import BusinessLogic.Nursery.CreateAnimals.CreatePackAnimals.CreateNewHorse;
+import BusinessLogic.Nursery.CreateAnimals.CreatePet.CreateNewCat;
+import BusinessLogic.Nursery.CreateAnimals.CreatePet.CreateNewDog;
+import BusinessLogic.Nursery.CreateAnimals.CreatePet.CreateNewHamster;
 import Models.Abstract.Animals.HumanFriend;
-import Models.Animals.PackAnimals.Camel;
-import Models.Animals.PackAnimals.Donkey;
-import Models.Animals.PackAnimals.Horse;
-import Models.Animals.Type;
-import View.ConsolePrinter;
+import View.Consoles.ConsolePrinterOne;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
 public class CreateNewAnimal {
@@ -25,7 +24,7 @@ public class CreateNewAnimal {
 	
 	public void createNewAnimal() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Укажите род животного: ");
+		ConsolePrinterOne.print("Укажите род животного: ");
 		String genus = scanner.nextLine();
 		
 		if (genus.toLowerCase().contains("horse")) {
@@ -34,10 +33,14 @@ public class CreateNewAnimal {
 			humanFriend = new CreateNewDonkey().getAnimal();
 		} else if (genus.toLowerCase().contains("camel")) {
 			humanFriend = new CreateNewCamel().getAnimal();
+		} else if (genus.toLowerCase().contains("cat")) {
+			humanFriend = new CreateNewCat().getAnimal();
+		} else if (genus.toLowerCase().contains("dog")) {
+			humanFriend = new CreateNewDog().getAnimal();
+		} else if (genus.toLowerCase().contains("hamster")) {
+			humanFriend = new CreateNewHamster().getAnimal();
 		} else {
-			ConsolePrinter.print("Животное такого рода нам не известно");
+			ConsolePrinterOne.print("Животное такого рода нам не известно");
 		}
 	}
-	
-	
 }

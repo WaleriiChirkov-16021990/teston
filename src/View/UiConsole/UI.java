@@ -1,4 +1,4 @@
-package View;
+package View.UiConsole;
 
 public class UI {
 	public static final String firstMenu = "\n1.Посмотреть всех животных питомника  " +

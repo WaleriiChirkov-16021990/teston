@@ -1,7 +1,7 @@
 package BusinessLogic.PackAnimals;
 
 import Models.Animals.PackAnimals.Horse;
-import View.ConsolePrinter;
+import View.Consoles.ConsolePrinterOne;
 
 public class CommandForHorseExtends <T extends Horse> {
 	private T animal;
@@ -33,10 +33,10 @@ public class CommandForHorseExtends <T extends Horse> {
 		} else if (animal.getWeight() < 0) {
 			throw new RuntimeException("Ошибка параметра 'weight' лошади"  + animal.getName(), new Throwable());
 		} else if (animal.getBiteForce() - animal.getENERGY_СONSUMPTION() >= 0) {
-			ConsolePrinter.print("Лошадь вас укусила");
+			ConsolePrinterOne.print("Лошадь вас укусила");
 			animal.setBiteForce(animal.getBiteForce() - animal.getENERGY_СONSUMPTION());
 		} else {
-			ConsolePrinter.print("У лошади нет сил даже на укус =(");
+			ConsolePrinterOne.print("У лошади нет сил даже на укус =(");
 		}
 	}
 }

@@ -1,7 +1,7 @@
 package BusinessLogic.PackAnimals;
 
 import Models.Animals.PackAnimals.Donkey;
-import View.ConsolePrinter;
+import View.Consoles.ConsolePrinterOne;
 
 public class CommandForDonkeyExtends<T extends Donkey> {
 	private T animal;
@@ -38,9 +38,9 @@ public class CommandForDonkeyExtends<T extends Donkey> {
 		} else if (this.animal.getWeight() <= 0) {
 			throw new RuntimeException("Не правильная инициализация ослика "  + animal.getName());
 		} else if (this.animal.getStubbornness() > 100) {
-			ConsolePrinter.print("Ослик уже настолько упрям что не пошел гулять!");
+			ConsolePrinterOne.print("Ослик уже настолько упрям что не пошел гулять!");
 		} else {
-			ConsolePrinter.print("Счастливый ослик пошел погулять!");
+			ConsolePrinterOne.print("Счастливый ослик пошел погулять!");
 			this.animal.setStubbornness(this.animal.getStubbornness() - this.animal.getENERGY_СONSUMPTION() * getRatio1Stubbornness());
 			this.animal.setEnergy(this.animal.getEnergy() + this.animal.getENERGY_СONSUMPTION() * getRatio2Energy());
 			this.animal.setLiftingWeight(this.animal.getLiftingWeight() + this.animal.getENERGY_СONSUMPTION());

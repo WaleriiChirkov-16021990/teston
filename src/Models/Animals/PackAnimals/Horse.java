@@ -3,7 +3,7 @@ package Models.Animals.PackAnimals;
 import BusinessLogic.PackAnimals.CommandForHorseExtends;
 import Models.Abstract.Animals.PackAnimal;
 import Models.Animals.Type;
-import View.ConsolePrinter;
+import View.Consoles.ConsolePrinterOne;
 
 import java.util.Date;
 import java.util.Map;
@@ -70,15 +70,15 @@ public class Horse extends PackAnimal {
 		} else if (getLiftingWeight() <= 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'liftingWeight'", new Throwable());
 		} else if ((impactForce - ENERGY_СONSUMPTION) <= 0) {
-			ConsolePrinter.print("Лошадь чуствует что не переживет данную работу без воды, еды и сна!");
+			ConsolePrinterOne.print("Лошадь чуствует что не переживет данную работу без воды, еды и сна!");
 			if ((biteForce - ENERGY_СONSUMPTION) >= 0) {
 				new CommandForHorseExtends<Horse>(this).bite();
 				setImpactForce(getBiteForce() - ENERGY_СONSUMPTION);
 			} else {
-				ConsolePrinter.print("Лошадь упала от истощения");
+				ConsolePrinterOne.print("Лошадь упала от истощения");
 			}
 		} else {
-			ConsolePrinter.print("Красавица лошадь вас лягнула.");
+			ConsolePrinterOne.print("Красавица лошадь вас лягнула.");
 			setImpactForce(getImpactForce() - ENERGY_СONSUMPTION);
 		}
 	}

@@ -3,7 +3,7 @@ package Models.Animals.Pet;
 import BusinessLogic.Pet.CommandForCatExtends;
 import Models.Abstract.Animals.Pet;
 import Models.Animals.Type;
-import View.ConsolePrinter;
+import View.Consoles.ConsolePrinterOne;
 
 import java.util.Date;
 import java.util.Map;
@@ -48,7 +48,7 @@ public class Cat extends Pet {
 		} else if (getWeight() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'weight'", new Throwable());
 		}
-		ConsolePrinter.print("Вы довольный играете с котиком");
+		ConsolePrinterOne.print("Вы довольный играете с котиком");
 		if (getWhoIsHePlayingWith() == "Valeriy") {
 			setLoves(getLoves() * 3);
 		} else {

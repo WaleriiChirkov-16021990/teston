@@ -1,7 +1,7 @@
 package BusinessLogic.PackAnimals;
 
 import Models.Animals.PackAnimals.Camel;
-import View.ConsolePrinter;
+import View.Consoles.ConsolePrinterOne;
 
 public class CommandForCamelExtends<T extends Camel> {
 	
@@ -23,9 +23,9 @@ public class CommandForCamelExtends<T extends Camel> {
 			throw new RuntimeException("Не правильная инициализация верблюда "  + animal.getName(), new Throwable());
 		}
 		if (animal.getAmountOfSaliva() - animal.getSPITTING_VOLUME() >= 0) {
-			ConsolePrinter.print("Верблюд плюнул вам на лицо");
+			ConsolePrinterOne.print("Верблюд плюнул вам на лицо");
 		} else {
-			ConsolePrinter.print("Верблюд упал потеряв сознание от обезвоживания, ему нужен покой");
+			ConsolePrinterOne.print("Верблюд упал потеряв сознание от обезвоживания, ему нужен покой");
 		}
 	}
 	
@@ -41,6 +41,6 @@ public class CommandForCamelExtends<T extends Camel> {
 		}
 		animal.setStockInTheHump(animal.getStockInTheHump() + animal.getENERGY_СONSUMPTION() * 6);
 		animal.setEnergy(animal.getEnergy() + animal.getENERGY_СONSUMPTION() * 4);
-		ConsolePrinter.print("Верблюд пополнил свои запасы и энергию 'ци'");
+		ConsolePrinterOne.print("Верблюд пополнил свои запасы и энергию 'ци'");
 	}
 }

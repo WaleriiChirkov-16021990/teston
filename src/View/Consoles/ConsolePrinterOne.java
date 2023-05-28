@@ -1,6 +1,6 @@
-package View;
+package View.Consoles;
 
-public class ConsolePrinter {
+public class ConsolePrinterOne {
 	public static void print(String s) {
 		System.out.println(s);
 	}

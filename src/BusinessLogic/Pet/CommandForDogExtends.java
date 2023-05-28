@@ -1,7 +1,7 @@
 package BusinessLogic.Pet;
 
 import Models.Animals.Pet.Dog;
-import View.ConsolePrinter;
+import View.Consoles.ConsolePrinterOne;
 
 public class CommandForDogExtends<T extends Dog> {
 	public T animal;
@@ -22,7 +22,7 @@ public class CommandForDogExtends<T extends Dog> {
 		} else if (animal.getIntelligence() <= 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'intelligence'", new Throwable());
 		}
-		ConsolePrinter.print("Собачка вас укусила.");
+		ConsolePrinterOne.print("Собачка вас укусила.");
 		animal.setLoves(animal.getLoves() / 2);
 		animal.setIntelligence(animal.getIntelligence() - 1);
 		animal.setEnergy(animal.getEnergy() - 3);
@@ -40,7 +40,7 @@ public class CommandForDogExtends<T extends Dog> {
 		} else if (animal.getWeight() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'weight'", new Throwable());
 		}
-		ConsolePrinter.print("Собака отлично выполняет базовые команды: сидит, лежит и даже даёт лапу =)");
+		ConsolePrinterOne.print("Собака отлично выполняет базовые команды: сидит, лежит и даже даёт лапу =)");
 		animal.setIntelligence(animal.getIntelligence() + 5);
 		animal.setLoves(animal.getLoves() * 2);
 	}

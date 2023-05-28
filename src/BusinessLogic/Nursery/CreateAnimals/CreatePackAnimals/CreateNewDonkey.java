@@ -1,4 +1,4 @@
-package BusinessLogic.Nursery.CreateAnimals;
+package BusinessLogic.Nursery.CreateAnimals.CreatePackAnimals;
 
 import Models.Animals.PackAnimals.Donkey;
 import Models.Animals.Type;

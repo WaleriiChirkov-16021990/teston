@@ -3,7 +3,7 @@ package Models.Animals.PackAnimals;
 import BusinessLogic.PackAnimals.CommandForCamelExtends;
 import Models.Abstract.Animals.PackAnimal;
 import Models.Animals.Type;
-import View.ConsolePrinter;
+import View.Consoles.ConsolePrinterOne;
 
 import java.util.Date;
 import java.util.Map;
@@ -64,7 +64,7 @@ public class Camel extends PackAnimal {
 	
 	public void chewThoms() {
 		setAmountOfSaliva(getAmountOfSaliva() + SPITTING_VOLUME * 4);
-		ConsolePrinter.print("Верблюд тебе благодарен!");
+		ConsolePrinterOne.print("Верблюд тебе благодарен!");
 	}
 	
 	@Override
@@ -80,15 +80,15 @@ public class Camel extends PackAnimal {
 		} else if (getWeight() < 0) {
 			throw new RuntimeException("Не инициализирована или имеет не корректтное значение переменная 'amountOfSaliva'", new Throwable());
 		} else if ((stockInTheHump - ENERGY_СONSUMPTION) <= 0) {
-			ConsolePrinter.print("Верблюд на последнем издыхании, он чуствует что не переживет данную экскурсию без воды, еды или сна!");
+			ConsolePrinterOne.print("Верблюд на последнем издыхании, он чуствует что не переживет данную экскурсию без воды, еды или сна!");
 			if ((amountOfSaliva - SPITTING_VOLUME) >= 0) {
 				new CommandForCamelExtends<Camel>().spit(this);
 				setAmountOfSaliva(getAmountOfSaliva() - SPITTING_VOLUME);
 			} else {
-				ConsolePrinter.print("Верблюд упал от истощения");
+				ConsolePrinterOne.print("Верблюд упал от истощения");
 			}
 		} else {
-			ConsolePrinter.print("And again the camel took an excursion to the oasis!");
+			ConsolePrinterOne.print("And again the camel took an excursion to the oasis!");
 			setStockInTheHump(getStockInTheHump() - ENERGY_СONSUMPTION);
 		}
 	}
