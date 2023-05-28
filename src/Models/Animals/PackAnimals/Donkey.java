@@ -14,13 +14,15 @@ public class Donkey extends PackAnimal {
 	private Map<String, String> studiedСommands;
 	
 	
-	public Donkey(int liftingWeight) {
+	public Donkey(int liftingWeight, int stubbornness) {
 		super(liftingWeight);
+		this.stubbornness = stubbornness;
 		this.studiedСommands = Map.of("Walk", "Ослик идет восполнять силы!");
 	}
 	
-	public Donkey(String name, Date birthDay, int energy, int weight, Type type, int liftingWeight) {
+	public Donkey(String name, Date birthDay, int energy, int weight, Type type, int liftingWeight, int stubbornness) {
 		super(name, birthDay, energy, weight, type, liftingWeight);
+		this.stubbornness = stubbornness;
 		this.studiedСommands = Map.of("Walk", "Ослик идет восполнять силы!");
 	}
 	

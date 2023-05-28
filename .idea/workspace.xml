@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="подготовил модели">
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateNewAnimal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/UI.java" afterDir="false" />
+    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="Создаю модуль заполнения данных нового животного">
+      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreateNewCamel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreateNewDonkey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreateNewHorse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateNewAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreateNewAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Camel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Camel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Donkey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Donkey.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685197153029</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Создаю модуль заполнения данных нового животного">
+      <created>1685223424575</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685223424575</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,6 +148,7 @@
     <MESSAGE value="дописал класс &quot;public class Cat.java&quot;" />
     <MESSAGE value="дописал класс &quot;public class Dog.java&quot; &amp; public class &#10;&quot;CommandForDogExtends.java&quot;" />
     <MESSAGE value="подготовил модели" />
-    <option name="LAST_COMMIT_MESSAGE" value="подготовил модели" />
+    <MESSAGE value="Создаю модуль заполнения данных нового животного" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создаю модуль заполнения данных нового животного" />
   </component>
 </project>

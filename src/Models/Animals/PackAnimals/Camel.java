@@ -67,10 +67,6 @@ public class Camel extends PackAnimal {
 		ConsolePrinter.print("Верблюд тебе благодарен!");
 	}
 	
-//	public void spit() {
-//		ConsolePrinter.print("Вы получили плевок в лицо от этого гордого живого существа!");
-//	}
-	
 	@Override
 	public void work() throws RuntimeException {
 		if (stockInTheHump < 0) {
