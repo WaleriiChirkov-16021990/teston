@@ -1,5 +1,6 @@
 package BusinessLogic.Nursery.CreateAnimals.CreatePackAnimals;
 
+import BusinessLogic.Nursery.Counter;
 import Models.Animals.PackAnimals.Donkey;
 import Models.Animals.Type;
 
@@ -26,34 +27,47 @@ public class CreateNewDonkey {
 	}
 	
 	private Donkey createDonkey() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Укажите имя: ");
-		String name = scanner.nextLine();
-		System.out.println("Введите дату рождения: dd-mm-yyyy ");
-		String date = scanner.next();
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+		String name;
 		Date date2 = null;
-		try {
-			//Parsing the String
-			date2 = dateFormat.parse(date);
-		} catch (ParseException e) {
-			e.printStackTrace();
+		String weights;
+		String liftingW;
+		try (Counter counter = new Counter()) {
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Укажите имя: ");
+			name = scanner.nextLine();
+			System.out.println("Введите дату рождения: dd-mm-yyyy ");
+			String date = scanner.next();
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+			date2 = null;
+			try {
+				//Parsing the String
+				date2 = dateFormat.parse(date);
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+			System.out.println("введите вес");
+			weights = scanner.next();
+			try {
+				weight = Integer.parseInt(weights);
+			} catch (RuntimeException e) {
+				e.fillInStackTrace();
+			}
+			System.out.println("введите тяговый вес");
+			liftingW = scanner.next();
+			try {
+				liftingWeight = Integer.parseInt(liftingW);
+			} catch (RuntimeException e) {
+				e.fillInStackTrace();
+			}
+			if (name == null || weight == 0 || liftingWeight == 0) {
+				throw new Exception("неправильная инициализация ослика");
+			} else {
+				counter.add();
+			}
+			return new Donkey("Donkey" + Counter.getCountAnimals(), name, date2, energy, weight, Type.PackAnimal, liftingWeight, stubbornness);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
-		System.out.println("введите вес");
-		String weights = scanner.next();
-		try {
-			weight = Integer.parseInt(weights);
-		} catch (RuntimeException e) {
-			e.fillInStackTrace();
-		}
-		System.out.println("введите тяговый вес");
-		String liftingW = scanner.next();
-		try {
-			liftingWeight = Integer.parseInt(liftingW);
-		} catch (RuntimeException e) {
-			e.fillInStackTrace();
-		}
-		return new Donkey(name,date2,energy,weight, Type.PackAnimal,liftingWeight,stubbornness);
+		
 	}
-	
 }

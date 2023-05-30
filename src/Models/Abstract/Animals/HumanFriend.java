@@ -12,18 +12,36 @@ public abstract class HumanFriend {
 	private int energy;
 	private int weight;
 	private Type type;
+	private String key;
 	
 	public HumanFriend() {
 		countAnimals += 1;
 	}
 	
-	public HumanFriend(String name, Date birthDay, int energy, int weight, Type type) {
+	public HumanFriend(String key,String name, Date birthDay, int energy, int weight, Type type) {
+		this.key = key;
 		this.name = name;
 		this.birthDay = birthDay;
 		this.energy = energy;
 		this.weight = weight;
 		this.type = type;
 		countAnimals +=1;
+	}
+	
+	public static int getCountAnimals() {
+		return countAnimals;
+	}
+	
+	public static void setCountAnimals(int countAnimals) {
+		HumanFriend.countAnimals = countAnimals;
+	}
+	
+	public String getKey() {
+		return key;
+	}
+	
+	public void setKey(String key) {
+		this.key = key;
 	}
 	
 	public String getName() {

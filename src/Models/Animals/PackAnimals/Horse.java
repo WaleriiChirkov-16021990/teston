@@ -22,8 +22,8 @@ public class Horse extends PackAnimal {
 		this.studiedСommands = Map.of("Hit", "Лошадь вас лягнула", "Bite", "Красавица лошадь вас укусила");
 	}
 	
-	public Horse(String name, Date birthDay, int energy, int weight, Type type, int liftingWeight, int impactForce, int biteForce) {
-		super(name, birthDay, energy, weight, type, liftingWeight);
+	public Horse(String key,String name, Date birthDay, int energy, int weight, Type type, int liftingWeight, int impactForce, int biteForce) {
+		super(key,name, birthDay, energy, weight, type, liftingWeight);
 		this.impactForce = impactForce;
 		this.biteForce = biteForce;
 		this.studiedСommands = Map.of("Hit", "Лошадь вас лягнула", "Bite", "Красавица лошадь вас укусила");

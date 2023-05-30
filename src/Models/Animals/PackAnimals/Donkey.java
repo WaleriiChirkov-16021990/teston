@@ -20,8 +20,8 @@ public class Donkey extends PackAnimal {
 		this.studiedСommands = Map.of("Walk", "Ослик идет восполнять силы!");
 	}
 	
-	public Donkey(String name, Date birthDay, int energy, int weight, Type type, int liftingWeight, int stubbornness) {
-		super(name, birthDay, energy, weight, type, liftingWeight);
+	public Donkey(String key, String name, Date birthDay, int energy, int weight, Type type, int liftingWeight, int stubbornness) {
+		super(key, name, birthDay, energy, weight, type, liftingWeight);
 		this.stubbornness = stubbornness;
 		this.studiedСommands = Map.of("Walk", "Ослик идет восполнять силы!");
 	}

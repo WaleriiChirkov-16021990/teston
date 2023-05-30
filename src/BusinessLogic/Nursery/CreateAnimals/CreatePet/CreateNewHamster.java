@@ -1,5 +1,6 @@
 package BusinessLogic.Nursery.CreateAnimals.CreatePet;
 
+import BusinessLogic.Nursery.Counter;
 import Models.Abstract.Animals.HumanFriend;
 import Models.Animals.Pet.Hamster;
 import Models.Animals.Type;
@@ -26,64 +27,74 @@ public class CreateNewHamster {
 	}
 	
 	private Hamster createHamster() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Укажите имя: ");
-		String name = scanner.nextLine();
-		System.out.println("Введите дату рождения: dd-mm-yyyy ");
-		String date = scanner.next();
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
-		Date date2 = null;
-		try {
-			//Parsing the String
-			date2 = dateFormat.parse(date);
-		} catch (ParseException e) {
-			e.printStackTrace();
+		try (Counter counter = new Counter()) {
+			
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Укажите имя: ");
+			String name = scanner.nextLine();
+			System.out.println("Введите дату рождения: dd-mm-yyyy ");
+			String date = scanner.next();
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+			Date date2 = null;
+			try {
+				//Parsing the String
+				date2 = dateFormat.parse(date);
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+			
+			System.out.println("введите вес");
+			String weights = scanner.next();
+			try {
+				weight = Integer.parseInt(weights);
+			} catch (RuntimeException e) {
+				e.fillInStackTrace();
+			}
+			
+			System.out.println("введите цвет животного");
+			String color = scanner.next();
+			
+			System.out.println("введите любимое блюдо животного");
+			String favoriteFood = scanner.next();
+			
+			System.out.println("введите любимую игрушку животного");
+			String favoriteToy = scanner.next();
+			
+			
+			System.out.println("Введите имя с кем любит играть кот? ");
+			String whoIsHePlayingWith = scanner.next();
+			
+			System.out.println("Введите насколько вы сильно любите это животное? 0-100");
+			String love = scanner.next();
+			try {
+				loves = Integer.parseInt(love);
+			} catch (RuntimeException e) {
+				e.fillInStackTrace();
+			}
+			System.out.println("Введите максимальное время пробежки это животное? ");
+			String timeMaxRuns = scanner.next();
+			try {
+				timeMaxRun = Integer.parseInt(timeMaxRuns);
+			} catch (RuntimeException e) {
+				e.fillInStackTrace();
+			}
+			
+			System.out.println("Введите расстояние которое пробегает это животное? ");
+			String distanceRuns = scanner.next();
+			try {
+				dictanceRun = Integer.parseInt(distanceRuns);
+			} catch (RuntimeException e) {
+				e.fillInStackTrace();
+			}
+			if (name == null || weight == 0 || color == null || color.equals("") || favoriteFood.equals("") || favoriteFood.equals("") || whoIsHePlayingWith.equals("") || loves == 0 || timeMaxRun == 0 || dictanceRun == 0) {
+				throw new Exception("Неправильная инициализация хомяка!");
+			} else {
+				counter.add();
+			}
+			return new Hamster("Hamster" + Counter.getCountAnimals(), name, date2, energy, weight, Type.Pet, whoIsHePlayingWith, loves, favoriteFood, favoriteToy, timeMaxRun, dictanceRun);
+			
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
-		
-		System.out.println("введите вес");
-		String weights = scanner.next();
-		try {
-			weight = Integer.parseInt(weights);
-		} catch (RuntimeException e) {
-			e.fillInStackTrace();
-		}
-		
-		System.out.println("введите цвет животного");
-		String color = scanner.next();
-		
-		System.out.println("введите любимое блюдо животного");
-		String favoriteFood = scanner.next();
-		
-		System.out.println("введите любимую игрушку животного");
-		String favoriteToy = scanner.next();
-		
-		
-		System.out.println("Введите имя с кем любит играть кот? ");
-		String whoIsHePlayingWith = scanner.next();
-		
-		System.out.println("Введите насколько вы сильно любите это животное? 0-100");
-		String love = scanner.next();
-		try {
-			loves = Integer.parseInt(love);
-		} catch (RuntimeException e) {
-			e.fillInStackTrace();
-		}
-		System.out.println("Введите максимальное время пробежки это животное? ");
-		String timeMaxRuns = scanner.next();
-		try {
-			timeMaxRun = Integer.parseInt(timeMaxRuns);
-		} catch (RuntimeException e) {
-			e.fillInStackTrace();
-		}
-		
-		System.out.println("Введите расстояние которое пробегает это животное? ");
-		String distanceRuns = scanner.next();
-		try {
-			dictanceRun = Integer.parseInt(distanceRuns);
-		} catch (RuntimeException e) {
-			e.fillInStackTrace();
-		}
-		return new Hamster(name, date2, energy, weight, Type.Pet, whoIsHePlayingWith, loves, favoriteFood, favoriteToy,timeMaxRun, dictanceRun);
-		
 	}
 }

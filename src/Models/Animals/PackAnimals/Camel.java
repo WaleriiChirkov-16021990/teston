@@ -22,8 +22,8 @@ public class Camel extends PackAnimal {
 		this.studiedСommands = Map.of("Chew Thorns", "Верблюд жует колючки =)", "spit", "Верблюд плюнул вам на лицо");
 	}
 	
-	public Camel(String name, Date birthDay, int energy, int weight, Type type, int liftingWeight, int stockInTheHump, int amountOfSaliva) {
-		super(name, birthDay, energy, weight, type, liftingWeight);
+	public Camel(String key,String name, Date birthDay, int energy, int weight, Type type, int liftingWeight, int stockInTheHump, int amountOfSaliva) {
+		super(key,name, birthDay, energy, weight, type, liftingWeight);
 		this.stockInTheHump = stockInTheHump;
 		this.amountOfSaliva = amountOfSaliva;
 		this.studiedСommands = Map.of("Chew Thorns", "Верблюд жует колючки =)", "spit", "Верблюд плюнул вам на лицо");

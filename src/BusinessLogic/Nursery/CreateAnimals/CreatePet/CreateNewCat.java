@@ -1,5 +1,6 @@
 package BusinessLogic.Nursery.CreateAnimals.CreatePet;
 
+import BusinessLogic.Nursery.Counter;
 import Models.Abstract.Animals.HumanFriend;
 import Models.Animals.Pet.Cat;
 import Models.Animals.Type;
@@ -25,43 +26,57 @@ public class CreateNewCat {
 	}
 	
 	private Cat createCat() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Укажите имя: ");
-		String name = scanner.nextLine();
-		System.out.println("Введите дату рождения: dd-mm-yyyy ");
-		String date = scanner.next();
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
-		Date date2 = null;
-		try {
-			//Parsing the String
-			date2 = dateFormat.parse(date);
-		} catch (ParseException e) {
-			e.printStackTrace();
+		String name;
+		Date date2;
+		String weights;
+		String favoriteFood;
+		String favoriteToy;
+		String color;
+		String whoIsHePlayingWith;
+		try (Counter counter = new Counter()) {
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Укажите имя: ");
+			name = scanner.nextLine();
+			System.out.println("Введите дату рождения: dd-mm-yyyy ");
+			String date = scanner.next();
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+			date2 = null;
+			try {
+				//Parsing the String
+				date2 = dateFormat.parse(date);
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+			System.out.println("введите вес");
+			weights = scanner.next();
+			try {
+				weight = Integer.parseInt(weights);
+			} catch (RuntimeException e) {
+				e.fillInStackTrace();
+			}
+			
+			System.out.println("введите цвет животного");
+			color = scanner.next();
+			
+			System.out.println("введите любимое блюдо животного");
+			favoriteFood = scanner.next();
+			
+			System.out.println("введите любимую игрушку животного");
+			favoriteToy = scanner.next();
+			
+			
+			System.out.println("Введите имя с кем любит играть кот? ");
+			whoIsHePlayingWith = scanner.next();
+			
+			if (name == null || weight == 0 || color == null || favoriteFood == null || favoriteFood.equals("") || favoriteToy == null|| favoriteToy.equals("")  || whoIsHePlayingWith == null) {
+				throw new Exception("неправильная инициализация котика");
+			} else {
+				counter.add();
+			}
+			return new Cat("Cat" + Counter.getCountAnimals(), name, date2, energy, weight, Type.Pet, whoIsHePlayingWith, loves, favoriteFood, favoriteToy, color);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
 		
-		
-		System.out.println("введите вес");
-		String weights = scanner.next();
-		try {
-			weight = Integer.parseInt(weights);
-		} catch (RuntimeException e) {
-			e.fillInStackTrace();
-		}
-		
-		System.out.println("введите цвет животного");
-		String color = scanner.next();
-		
-		System.out.println("введите любимое блюдо животного");
-		String favoriteFood = scanner.next();
-		
-		System.out.println("введите любимую игрушку животного");
-		String favoriteToy = scanner.next();
-		
-		
-		System.out.println("Введите имя с кем любит играть кот? ");
-		String whoIsHePlayingWith = scanner.next();
-		
-		
-		return new Cat(name, date2, energy, weight, Type.Pet, whoIsHePlayingWith, loves, favoriteFood, favoriteToy, color);
 	}
 }

@@ -19,8 +19,8 @@ public class Cat extends Pet {
 		
 	}
 	
-	public Cat(String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy, String color) {
-		super(name, birthDay, energy, weight, type, whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
+	public Cat(String key,String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy, String color) {
+		super(key,name, birthDay, energy, weight, type, whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
 		this.color = color;
 		this.studiedСommands = Map.of("Scratch", "котенок вас поцарапал");
 	}

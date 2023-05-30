@@ -17,8 +17,8 @@ public abstract class Pet extends HumanFriend {
 		this.favoriteToy = favoriteToy;
 	}
 	
-	public Pet(String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy) {
-		super(name, birthDay, energy, weight, type);
+	public Pet(String key, String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy) {
+		super(key, name, birthDay, energy, weight, type);
 		this.whoIsHePlayingWith = whoIsHePlayingWith;
 		this.loves = loves;
 		this.favoriteFood = favoriteFood;

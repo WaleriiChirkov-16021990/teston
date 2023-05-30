@@ -18,8 +18,8 @@ public class Dog extends Pet {
 		
 	}
 	
-	public Dog(String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy, int intelligence) {
-		super(name, birthDay, energy, weight, type, whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
+	public Dog(String key,String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy, int intelligence) {
+		super(key, name, birthDay, energy, weight, type, whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
 		this.intelligence = intelligence;
 		this.studiedСommands = Map.of("Execute the command", "собака выполняет команды", "Bite", "Собака вас укусила");
 	}

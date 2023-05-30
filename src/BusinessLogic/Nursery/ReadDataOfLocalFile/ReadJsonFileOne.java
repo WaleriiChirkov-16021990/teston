@@ -32,7 +32,19 @@ public class ReadJsonFileOne <T extends HumanFriend> {
 			throw new RuntimeException("Отсутствует локальная база!",e.fillInStackTrace());
 		}
 		this.allAnimals = (Map<Type, Map<T, ArrayList<T>>>) jsonObject;
-//		System.out.println(this.allAnimals);
+		ArrayList<T> arrayListCat = new ArrayList<>();
+		ArrayList<T> arrayListDog = new ArrayList<>();
+		ArrayList<T> arrayListHamster = new ArrayList<>();
+		HashMap<String,HashMap<String,ArrayList<T>>> hashMap = new HashMap<>();
+		HashMap<String, ArrayList<T>> animaPet = new HashMap<>();
+		HashMap<String, ArrayList<T>> animaPack = new HashMap<>();
+		arrayListCat = allAnimals.get(Type.Pet.toString()).get("Cat");
+		arrayListDog = allAnimals.get(Type.Pet.toString()).get("Dog");
+		arrayListHamster = allAnimals.get(Type.Pet.toString()).get("Hamster");
+		animaPet.put("Cat",arrayListCat);
+		animaPet.put("Dog",arrayListDog);
+		animaPet.put("Hamster",arrayListHamster);
+		hashMap.put("Pet",animaPet);
 	}
 	
 //	public void writeJsonSimpleDemo(String filename) throws Exception {

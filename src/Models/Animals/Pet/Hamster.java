@@ -22,8 +22,8 @@ public class Hamster extends Pet {
 		
 	}
 	
-	public Hamster(String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy, int timeMaxRun, int distanceRun) {
-		super(name, birthDay, energy, weight, type, whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
+	public Hamster(String key,String name, Date birthDay, int energy, int weight, Type type, String whoIsHePlayingWith, int loves, String favoriteFood, String favoriteToy, int timeMaxRun, int distanceRun) {
+		super(key,name, birthDay, energy, weight, type, whoIsHePlayingWith, loves, favoriteFood, favoriteToy);
 		this.timeMaxRun = timeMaxRun;
 		this.distanceRun = distanceRun;
 		this.studiedСommands = Map.of("Run", "Хомяк даёт жару в колесе!");

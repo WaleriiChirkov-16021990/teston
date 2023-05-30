@@ -1,26 +1,25 @@
 package Models.Nursery.NurseryOne;
 
 import Models.Abstract.Animals.HumanFriend;
-import Models.Animals.Type;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class NurseryOne<T extends HumanFriend> {
-	private Map<Type,Map<T,ArrayList<T>>> allAnimals;
+	private HashMap<String,HumanFriend> allAnimals;
 	
-	public NurseryOne(Map<Type,Map<T, ArrayList<T>>> animals) {
-		this.allAnimals = animals;
-	}
+	
+	
 	
 	public NurseryOne() {
+		this.allAnimals = new HashMap<>();
 	}
 	
-	public Map<Type, Map<T,ArrayList<T>>> getAllAnimals() {
+	public Map<String, HumanFriend> getAllAnimals() {
 		return allAnimals;
 	}
 	
-	public void setAllAnimals(Map<Type, Map<T,ArrayList<T>>> allAnimals) {
+	public void setAllAnimals(HashMap<String, HumanFriend> allAnimals) {
 		this.allAnimals = allAnimals;
 	}
 }

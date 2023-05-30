@@ -12,9 +12,9 @@ public class AddNewAnimal <T extends NurseryOne<HumanFriend>> {
 		this.nusery = nusery;
 	}
 	
-	public <T> void add() {
+	public void add() throws RuntimeException {
 		try {
-			this.nusery.getAllAnimals().get(this.animal.getType()).get(this.animal.getName()).add(this.animal);
+			this.nusery.getAllAnimals().put(animal.getKey() ,animal);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

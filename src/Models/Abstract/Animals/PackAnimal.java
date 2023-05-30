@@ -13,8 +13,8 @@ public abstract class PackAnimal extends HumanFriend {
 		this.liftingWeight = liftingWeight;
 	}
 	
-	public PackAnimal(String name, Date birthDay, int energy, int weight, Type type, int liftingWeight) {
-		super(name, birthDay, energy, weight, type);
+	public PackAnimal(String key,String name, Date birthDay, int energy, int weight, Type type, int liftingWeight) {
+		super(key,name, birthDay, energy, weight, type);
 		this.liftingWeight = liftingWeight;
 	}
 	
