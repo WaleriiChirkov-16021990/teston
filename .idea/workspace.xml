@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="переделал структуру бд, ушел от локального файла">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreatePackAnimals/CreateNewCamel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreatePackAnimals/CreateNewCamel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreatePackAnimals/CreateNewDonkey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreatePackAnimals/CreateNewDonkey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreatePackAnimals/CreateNewHorse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreatePackAnimals/CreateNewHorse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreatePet/CreateNewCat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreatePet/CreateNewCat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreatePet/CreateNewDog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreatePet/CreateNewDog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreatePet/CreateNewHamster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/CreateAnimals/CreatePet/CreateNewHamster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/ShowAllAnimals/ShowAllAnimalsOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/ShowAllAnimals/ShowAllAnimalsOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Consoles/ConsoleControllerOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Consoles/ConsoleControllerOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Abstract/Animals/PackAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Abstract/Animals/PackAnimal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Abstract/Animals/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Abstract/Animals/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Camel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Camel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Donkey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Donkey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/PackAnimals/Horse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Animals/Pet/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/Pet/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Animals/Pet/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/Pet/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Animals/Pet/Hamster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Animals/Pet/Hamster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Nursery/NurseryOne/NurseryOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Nursery/NurseryOne/NurseryOne.java" afterDir="false" />
-    </list>
+    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="Доработал наследный toString()" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -169,7 +149,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685448378196</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Добавил наследный toString()">
+      <created>1685450150229</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1685450150229</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Доработал наследный toString()">
+      <created>1685450741076</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685450741076</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,7 +191,9 @@
     <MESSAGE value="Создал модуль заполнения данных нового животного для &#10;всех 6-ти родов (кошка, собака, хомяк, лошадь, верблюд,&#10;ослик)." />
     <MESSAGE value="Научился выводить всех животных" />
     <MESSAGE value="переделал структуру бд, ушел от локального файла" />
-    <option name="LAST_COMMIT_MESSAGE" value="переделал структуру бд, ушел от локального файла" />
+    <MESSAGE value="Добавил наследный toString()" />
+    <MESSAGE value="Доработал наследный toString()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Доработал наследный toString()" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

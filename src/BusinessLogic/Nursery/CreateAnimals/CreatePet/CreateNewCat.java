@@ -39,7 +39,7 @@ public class CreateNewCat {
 			name = scanner.nextLine();
 			System.out.println("Введите дату рождения: dd-mm-yyyy ");
 			String date = scanner.next();
-			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
 			date2 = null;
 			try {
 				//Parsing the String

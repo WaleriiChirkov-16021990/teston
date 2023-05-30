@@ -34,7 +34,7 @@ public class CreateNewHamster {
 			String name = scanner.nextLine();
 			System.out.println("Введите дату рождения: dd-mm-yyyy ");
 			String date = scanner.next();
-			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
 			Date date2 = null;
 			try {
 				//Parsing the String
