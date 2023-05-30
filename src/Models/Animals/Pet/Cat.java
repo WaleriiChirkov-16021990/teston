@@ -61,7 +61,7 @@ public class Cat extends Pet {
 	
 	@Override
 	public String toString() {
-		return super.toString() +
+		return super.toString().replace("}","") + ", " +
 				"color='" + color + '\'' +
 				", studiedСommands=" + studiedСommands +
 				'}';

@@ -85,7 +85,7 @@ public class Horse extends PackAnimal {
 	
 	@Override
 	public String toString() {
-		return super.toString() +
+		return super.toString().replace("}","") + ", " +
 				"impactForce=" + impactForce +
 				", biteForce=" + biteForce +
 				", studiedСommands=" + studiedСommands +

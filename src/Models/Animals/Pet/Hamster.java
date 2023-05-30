@@ -86,7 +86,7 @@ public class Hamster extends Pet {
 	
 	@Override
 	public String toString() {
-		return super.toString() +
+		return super.toString().replace("}","") + ", " +
 				"timeMaxRun=" + timeMaxRun +
 				", distanceRun=" + distanceRun +
 				", studiedСommands=" + studiedСommands +

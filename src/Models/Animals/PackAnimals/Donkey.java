@@ -67,7 +67,7 @@ public class Donkey extends PackAnimal {
 	
 	@Override
 	public String toString() {
-		return super.toString() +
+		return super.toString().replace("}","") + ", " +
 				"stubbornness=" + stubbornness +
 				", ENERGY_СONSUMPTION=" + ENERGY_СONSUMPTION +
 				", studiedСommands=" + studiedСommands +

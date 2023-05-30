@@ -30,7 +30,7 @@ public abstract class PackAnimal extends HumanFriend {
 	
 	@Override
 	public String toString() {
-		return super.toString() +
+		return super.toString().replace("}","") + ", " +
 				"liftingWeight=" + liftingWeight +
 				'}';
 	}

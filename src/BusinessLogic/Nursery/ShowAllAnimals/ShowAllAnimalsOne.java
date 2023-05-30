@@ -17,22 +17,11 @@ public class ShowAllAnimalsOne<T extends HumanFriend> {
 		showAll();
 	}
 	
-//	public void showAll() {
-//		for (Type allTypes :
-//				Type.values()) {
-//			Set<HumanFriend> animals = (Set<HumanFriend>) allAnimals.get(allTypes.toString()).keySet();
-//			for (int i = 0; i < animals.size(); i++) {
-//				System.out.println(getAllAnimals().get(allTypes.toString()).get(animals.toArray()[i]));
-//				System.out.println();
-//			}
-//		}
-//	}
-	
 	public void showAll() {
 		ConsolePrinterOne.print("\n");
 		for (String animal:
 		     this.allAnimals.keySet()) {
-//			ConsolePrinterOne.print(animal + " : \n");
+			ConsolePrinterOne.print(animal + " : \n");
 			ConsolePrinterOne.print((allAnimals.get(animal).toString()));
 		}
 	}

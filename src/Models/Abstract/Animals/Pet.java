@@ -61,7 +61,7 @@ public abstract class Pet extends HumanFriend {
 	
 	@Override
 	public String toString() {
-		return super.toString() +
+		return super.toString().replace("}","") + ", " +
 				"whoIsHePlayingWith='" + whoIsHePlayingWith + '\'' +
 				", loves=" + loves +
 				", favoriteFood='" + favoriteFood + '\'' +

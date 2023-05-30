@@ -65,7 +65,7 @@ public class Dog extends Pet {
 	
 	@Override
 	public String toString() {
-		return super.toString() +
+		return super.toString().replace("}","") + ", " +
 				"intelligence=" + intelligence +
 				", studiedСommands=" + studiedСommands +
 				'}';
