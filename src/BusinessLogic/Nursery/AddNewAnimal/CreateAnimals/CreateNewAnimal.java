@@ -1,11 +1,11 @@
-package BusinessLogic.Nursery.CreateAnimals;
+package BusinessLogic.Nursery.AddNewAnimal.CreateAnimals;
 
-import BusinessLogic.Nursery.CreateAnimals.CreatePackAnimals.CreateNewCamel;
-import BusinessLogic.Nursery.CreateAnimals.CreatePackAnimals.CreateNewDonkey;
-import BusinessLogic.Nursery.CreateAnimals.CreatePackAnimals.CreateNewHorse;
-import BusinessLogic.Nursery.CreateAnimals.CreatePet.CreateNewCat;
-import BusinessLogic.Nursery.CreateAnimals.CreatePet.CreateNewDog;
-import BusinessLogic.Nursery.CreateAnimals.CreatePet.CreateNewHamster;
+import BusinessLogic.Nursery.AddNewAnimal.CreateAnimals.CreatePackAnimals.CreateNewCamel;
+import BusinessLogic.Nursery.AddNewAnimal.CreateAnimals.CreatePackAnimals.CreateNewDonkey;
+import BusinessLogic.Nursery.AddNewAnimal.CreateAnimals.CreatePackAnimals.CreateNewHorse;
+import BusinessLogic.Nursery.AddNewAnimal.CreateAnimals.CreatePet.CreateNewCat;
+import BusinessLogic.Nursery.AddNewAnimal.CreateAnimals.CreatePet.CreateNewDog;
+import BusinessLogic.Nursery.AddNewAnimal.CreateAnimals.CreatePet.CreateNewHamster;
 import Models.Abstract.Animals.HumanFriend;
 import View.Consoles.ConsolePrinterOne;
 

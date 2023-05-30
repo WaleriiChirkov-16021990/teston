@@ -3,6 +3,7 @@ package Models.Abstract.Animals;
 import Models.Animals.Type;
 
 import java.util.Date;
+import java.util.Map;
 import java.util.Objects;
 
 public abstract class HumanFriend {
@@ -13,6 +14,7 @@ public abstract class HumanFriend {
 	private int weight;
 	private Type type;
 	private String key;
+	private Map<String, String> studiedСommands;
 	
 	public HumanFriend() {
 		countAnimals += 1;
@@ -82,6 +84,14 @@ public abstract class HumanFriend {
 	
 	public void setType(Type type) {
 		this.type = type;
+	}
+	
+	public Map<String, String> getStudiedСommands() {
+		return studiedСommands;
+	}
+	
+	public void setStudiedСommands(Map<String, String> studiedСommands) {
+		this.studiedСommands = studiedСommands;
 	}
 	
 	@Override

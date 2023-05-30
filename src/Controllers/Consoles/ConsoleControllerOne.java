@@ -1,9 +1,11 @@
 package Controllers.Consoles;
 
-import BusinessLogic.Nursery.AddNewAnimal;
-import BusinessLogic.Nursery.CreateAnimals.CreateNewAnimal;
-import BusinessLogic.Nursery.ReadDataOfLocalFile.ReadJsonFileOne;
+import BusinessLogic.Nursery.AddNewAnimal.AddNewAnimal;
+import BusinessLogic.Nursery.AddNewAnimal.CreateAnimals.CreateNewAnimal;
 import BusinessLogic.Nursery.ShowAllAnimals.ShowAllAnimalsOne;
+import BusinessLogic.Nursery.ShowStudiedCommands.SearchAnimal.SearchAnimalOfName;
+import BusinessLogic.Nursery.ShowStudiedCommands.SearchAnimal.ShowFinderAnimals;
+import BusinessLogic.Nursery.TeacherOfNewCommands.TeacherOfAnimalCommands;
 import Models.Abstract.Animals.HumanFriend;
 import Models.Nursery.NurseryOne.NurseryOne;
 import View.Consoles.ConsolePrinterOne;
@@ -28,9 +30,9 @@ public class ConsoleControllerOne {
 	public void runApplication() {
 //	readJsonFileOne.readFile();
 //	nurseryOne.setAllAnimals(readJsonFileOne.getAllAnimals());
-	Scanner scanner = new Scanner(System.in);
-	String inputUser = null;
-	boolean flag = true;
+		Scanner scanner = new Scanner(System.in);
+		String inputUser = null;
+		boolean flag = true;
 		while (flag) {
 			ConsolePrinterOne.print(UI.firstMenu);
 			inputUser = scanner.nextLine().strip();
@@ -43,13 +45,11 @@ public class ConsoleControllerOne {
 //				readJsonFileOne.readFile();
 //				new ShowAllAnimalsOne<HumanFriend>(readJsonFileOne.getAllAnimals());
 			} else if (inputUser.equals("2")) {
-				CreateNewAnimal create = new CreateNewAnimal();
-				AddNewAnimal<NurseryOne<HumanFriend>> addNewAnimal = new AddNewAnimal<NurseryOne<HumanFriend>>(create.getHumanFriend(), this.nurseryOne);
-				addNewAnimal.add();
+				AddNewAnimal<NurseryOne<HumanFriend>> addNewAnimal = new AddNewAnimal<NurseryOne<HumanFriend>>(this.nurseryOne);
 			} else if (inputUser.equals("3")) {
-			
+				ShowFinderAnimals.show(SearchAnimalOfName.searchOfName(this.nurseryOne));
 			} else if (inputUser.equals("4")) {
-			
+				TeacherOfAnimalCommands.study(this.nurseryOne);
 			} else if (inputUser.equals("5")) {
 			
 			} else if (inputUser.equals("6")) {
@@ -70,7 +70,7 @@ public class ConsoleControllerOne {
 	public void setNurseryOne(NurseryOne<HumanFriend> nurseryOne) {
 		this.nurseryOne = nurseryOne;
 	}
-	
+
 //	public ReadJsonFileOne<HumanFriend> getReadJsonFileOne() {
 //		return readJsonFileOne;
 //	}

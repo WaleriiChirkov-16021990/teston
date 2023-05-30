@@ -1,8 +1,8 @@
-package BusinessLogic.Nursery.CreateAnimals.CreatePet;
+package BusinessLogic.Nursery.AddNewAnimal.CreateAnimals.CreatePet;
 
 import BusinessLogic.Nursery.Counter;
 import Models.Abstract.Animals.HumanFriend;
-import Models.Animals.Pet.Dog;
+import Models.Animals.Pet.Hamster;
 import Models.Animals.Type;
 
 import java.text.ParseException;
@@ -10,23 +10,25 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class CreateNewDog {
+public class CreateNewHamster {
 	private HumanFriend animal;
-	private int energy = 77;
-	private int weight = 40;
-	private int loves = 60;
-	private int intelligence = 60;
+	private int energy = 99;
+	private int weight = 1;
+	private int loves = 45;
+	private int timeMaxRun = 10;
+	private int dictanceRun = 20;
 	
-	public CreateNewDog() {
-		this.animal = createDog();
+	public CreateNewHamster() {
+		this.animal = createHamster();
 	}
 	
 	public HumanFriend getAnimal() {
 		return animal;
 	}
 	
-	private Dog createDog() {
+	private Hamster createHamster() {
 		try (Counter counter = new Counter()) {
+			
 			Scanner scanner = new Scanner(System.in);
 			System.out.println("Укажите имя: ");
 			String name = scanner.nextLine();
@@ -40,7 +42,6 @@ public class CreateNewDog {
 			} catch (ParseException e) {
 				e.printStackTrace();
 			}
-			
 			System.out.println("введите вес");
 			String weights = scanner.next();
 			try {
@@ -48,7 +49,6 @@ public class CreateNewDog {
 			} catch (RuntimeException e) {
 				e.fillInStackTrace();
 			}
-			
 			System.out.println("введите цвет животного");
 			String color = scanner.next();
 			
@@ -69,20 +69,28 @@ public class CreateNewDog {
 			} catch (RuntimeException e) {
 				e.fillInStackTrace();
 			}
-			
-			System.out.println("Введите интелект это животного? 0-100");
-			String intellect = scanner.next();
+			System.out.println("Введите максимальное время пробежки это животное? ");
+			String timeMaxRuns = scanner.next();
 			try {
-				intelligence = Integer.parseInt(intellect);
+				timeMaxRun = Integer.parseInt(timeMaxRuns);
 			} catch (RuntimeException e) {
 				e.fillInStackTrace();
 			}
-			if (name == null || weight == 0 || color == null || color.equals("") || favoriteFood.equals("") || favoriteFood.equals("") || whoIsHePlayingWith.equals("") || loves == 0 || intelligence == 0) {
-				throw new Exception("Неправильная инициализация собаки!");
+			
+			System.out.println("Введите расстояние которое пробегает это животное? ");
+			String distanceRuns = scanner.next();
+			try {
+				dictanceRun = Integer.parseInt(distanceRuns);
+			} catch (RuntimeException e) {
+				e.fillInStackTrace();
+			}
+			if (name == null || weight == 0 || color == null || color.equals("") || favoriteFood.equals("") || favoriteFood.equals("") || whoIsHePlayingWith.equals("") || loves == 0 || timeMaxRun == 0 || dictanceRun == 0) {
+				throw new Exception("Неправильная инициализация хомяка!");
 			} else {
 				counter.add();
 			}
-			return new Dog("Dog" + Counter.getCountAnimals(), name, date2, energy, weight, Type.Pet, whoIsHePlayingWith, loves, favoriteFood, favoriteToy, intelligence);
+			return new Hamster("Hamster" + Counter.getCountAnimals(), name, date2, energy, weight, Type.Pet, whoIsHePlayingWith, loves, favoriteFood, favoriteToy, timeMaxRun, dictanceRun);
+			
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

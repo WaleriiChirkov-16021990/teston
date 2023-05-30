@@ -1,8 +1,7 @@
-package BusinessLogic.Nursery.CreateAnimals.CreatePackAnimals;
+package BusinessLogic.Nursery.AddNewAnimal.CreateAnimals.CreatePackAnimals;
 
 import BusinessLogic.Nursery.Counter;
 import Models.Animals.PackAnimals.Camel;
-import Models.Animals.PackAnimals.Horse;
 import Models.Animals.Type;
 
 import java.text.ParseException;

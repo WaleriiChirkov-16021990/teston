@@ -8,4 +8,5 @@ public class UI {
 											"\n5.Удалить жевотное " +
 											"\n6.Перенести животное в другой тип " +
 											"\n7.Выход ";
+	public static final String enterNameAnimal ="\nВведите имя животного: ";
 }

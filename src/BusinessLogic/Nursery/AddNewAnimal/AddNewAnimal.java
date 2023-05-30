@@ -1,5 +1,6 @@
-package BusinessLogic.Nursery;
+package BusinessLogic.Nursery.AddNewAnimal;
 
+import BusinessLogic.Nursery.AddNewAnimal.CreateAnimals.CreateNewAnimal;
 import Models.Abstract.Animals.HumanFriend;
 import Models.Nursery.NurseryOne.NurseryOne;
 
@@ -7,9 +8,11 @@ public class AddNewAnimal <T extends NurseryOne<HumanFriend>> {
 	private HumanFriend animal;
 	private T nusery;
 	
-	public AddNewAnimal(HumanFriend animal, T nusery) {
-		this.animal = animal;
+	public AddNewAnimal(T nusery) {
 		this.nusery = nusery;
+		CreateNewAnimal create = new CreateNewAnimal();
+		this.animal = create.getHumanFriend();
+		add();
 	}
 	
 	public void add() throws RuntimeException {
