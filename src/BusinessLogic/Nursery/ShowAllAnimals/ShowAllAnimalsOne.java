@@ -21,7 +21,7 @@ public class ShowAllAnimalsOne<T extends HumanFriend> {
 		ConsolePrinterOne.print("\n");
 		for (String animal:
 		     this.allAnimals.keySet()) {
-			ConsolePrinterOne.print(animal + " : \n");
+			ConsolePrinterOne.print(animal + " :");
 			ConsolePrinterOne.print((allAnimals.get(animal).toString()));
 		}
 	}

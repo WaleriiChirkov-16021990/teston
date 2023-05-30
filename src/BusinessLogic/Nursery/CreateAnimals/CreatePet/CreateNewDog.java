@@ -32,7 +32,7 @@ public class CreateNewDog {
 			String name = scanner.nextLine();
 			System.out.println("Введите дату рождения: dd-mm-yyyy ");
 			String date = scanner.next();
-			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 			Date date2 = null;
 			try {
 				//Parsing the String
