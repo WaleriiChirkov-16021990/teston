@@ -3,23 +3,17 @@ package Models.Nursery.NurseryOne;
 import Models.Abstract.Animals.HumanFriend;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class NurseryOne<T extends HumanFriend> {
-	private HashMap<String,HumanFriend> allAnimals;
-	
-	
+	private HashMap<String, T> allAnimals;
 	
 	
 	public NurseryOne() {
 		this.allAnimals = new HashMap<>();
 	}
 	
-	public HashMap<String, HumanFriend> getAllAnimals() {
+	public HashMap<String, T> getAllAnimals() {
 		return allAnimals;
 	}
 	
-	public void setAllAnimals(HashMap<String, HumanFriend> allAnimals) {
-		this.allAnimals = allAnimals;
-	}
 }

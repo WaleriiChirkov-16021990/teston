@@ -1,4 +1,4 @@
-package BusinessLogic.Nursery;
+package BusinessLogic.Nursery.Counter;
 
 import java.io.Closeable;
 
@@ -65,7 +65,7 @@ public class Counter implements AutoCloseable {
 	 * to make their {@code close} methods idempotent.
 	 */
 	@Override
-	public void close() throws Exception {
+	public void close() {
 		System.out.println("Объект счётчик закрыт");
 	}
 }

@@ -1,6 +1,6 @@
 package BusinessLogic.Nursery.AddNewAnimal.CreateAnimals.CreatePet;
 
-import BusinessLogic.Nursery.Counter;
+import BusinessLogic.Nursery.Counter.Counter;
 import Models.Abstract.Animals.HumanFriend;
 import Models.Animals.Pet.Cat;
 import Models.Animals.Type;

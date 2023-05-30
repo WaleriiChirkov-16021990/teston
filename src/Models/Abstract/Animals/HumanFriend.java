@@ -3,6 +3,7 @@ package Models.Abstract.Animals;
 import Models.Animals.Type;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
@@ -18,16 +19,18 @@ public abstract class HumanFriend {
 	
 	public HumanFriend() {
 		countAnimals += 1;
+		this.setStudiedСommands(new HashMap<>());
 	}
 	
-	public HumanFriend(String key,String name, Date birthDay, int energy, int weight, Type type) {
+	public HumanFriend(String key, String name, Date birthDay, int energy, int weight, Type type) {
 		this.key = key;
 		this.name = name;
 		this.birthDay = birthDay;
 		this.energy = energy;
 		this.weight = weight;
 		this.type = type;
-		countAnimals +=1;
+		this.setStudiedСommands(new HashMap<>());
+		countAnimals += 1;
 	}
 	
 	public static int getCountAnimals() {
@@ -109,13 +112,11 @@ public abstract class HumanFriend {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (!(o instanceof HumanFriend that)) return false;
-		return energy == that.energy && weight == that.weight && Objects.equals(name, that.name) && Objects.equals(birthDay, that.birthDay) && type == that.type;
+		return getEnergy() == that.getEnergy() && getWeight() == that.getWeight() && Objects.equals(getName(), that.getName()) && Objects.equals(getBirthDay(), that.getBirthDay()) && getType() == that.getType() && Objects.equals(getKey(), that.getKey()) && Objects.equals(getStudiedСommands(), that.getStudiedСommands());
 	}
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(name, birthDay, energy, weight, type);
+		return Objects.hash(getName(), getBirthDay(), getEnergy(), getWeight(), getType(), getKey(), getStudiedСommands());
 	}
-	
-	
 }

@@ -1,6 +1,6 @@
 package BusinessLogic.Nursery.AddNewAnimal.CreateAnimals.CreatePackAnimals;
 
-import BusinessLogic.Nursery.Counter;
+import BusinessLogic.Nursery.Counter.Counter;
 import Models.Animals.PackAnimals.Horse;
 import Models.Animals.Type;
 

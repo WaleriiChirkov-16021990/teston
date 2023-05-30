@@ -24,23 +24,30 @@ public class CreateNewAnimal {
 	
 	public void createNewAnimal() {
 		Scanner scanner = new Scanner(System.in);
-		ConsolePrinterOne.print("Укажите род животного: ");
+		ConsolePrinterOne.print("Укажите род животного: (camel,cat ...)");
 		String genus = scanner.nextLine();
-		
-		if (genus.toLowerCase().contains("horse")) {
-			humanFriend = new CreateNewHorse().getAnimal();
-		} else if (genus.toLowerCase().contains("donkey")) {
-			humanFriend = new CreateNewDonkey().getAnimal();
-		} else if (genus.toLowerCase().contains("camel")) {
-			humanFriend = new CreateNewCamel().getAnimal();
-		} else if (genus.toLowerCase().contains("cat")) {
-			humanFriend = new CreateNewCat().getAnimal();
-		} else if (genus.toLowerCase().contains("dog")) {
-			humanFriend = new CreateNewDog().getAnimal();
-		} else if (genus.toLowerCase().contains("hamster")) {
-			humanFriend = new CreateNewHamster().getAnimal();
-		} else {
-			ConsolePrinterOne.print("Животное такого рода нам не известно");
+		while (true) {
+			if (genus.toLowerCase().contains("horse")) {
+				humanFriend = new CreateNewHorse().getAnimal();
+				break;
+			} else if (genus.toLowerCase().contains("donkey")) {
+				humanFriend = new CreateNewDonkey().getAnimal();
+				break;
+			} else if (genus.toLowerCase().contains("camel")) {
+				humanFriend = new CreateNewCamel().getAnimal();
+				break;
+			} else if (genus.toLowerCase().contains("cat")) {
+				humanFriend = new CreateNewCat().getAnimal();
+				break;
+			} else if (genus.toLowerCase().contains("dog")) {
+				humanFriend = new CreateNewDog().getAnimal();
+				break;
+			} else if (genus.toLowerCase().contains("hamster")) {
+				humanFriend = new CreateNewHamster().getAnimal();
+				break;
+			} else {
+				ConsolePrinterOne.print("Животное такого рода нам не известно");
+			}
 		}
 	}
 }
