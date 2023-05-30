@@ -40,7 +40,7 @@ public class CreateNewCamel {
 			name = scanner.nextLine();
 			System.out.println("Введите дату рождения: dd-mm-yyyy ");
 			String date = scanner.next();
-			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+			SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy");
 			try {
 				//Parsing the String
 				date2 = dateFormat.parse(date);

@@ -58,4 +58,14 @@ public abstract class Pet extends HumanFriend {
 	}
 	
 	public abstract void toPlay();
+	
+	@Override
+	public String toString() {
+		return super.toString() +
+				"whoIsHePlayingWith='" + whoIsHePlayingWith + '\'' +
+				", loves=" + loves +
+				", favoriteFood='" + favoriteFood + '\'' +
+				", favoriteToy='" + favoriteToy + '\'' +
+				'}';
+	}
 }

@@ -27,4 +27,11 @@ public abstract class PackAnimal extends HumanFriend {
 	}
 	
 	protected abstract void work();
+	
+	@Override
+	public String toString() {
+		return super.toString() +
+				"liftingWeight=" + liftingWeight +
+				'}';
+	}
 }

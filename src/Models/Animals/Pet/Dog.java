@@ -62,4 +62,12 @@ public class Dog extends Pet {
 			setLoves(getLoves() * 2);
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString() +
+				"intelligence=" + intelligence +
+				", studiedСommands=" + studiedСommands +
+				'}';
+	}
 }

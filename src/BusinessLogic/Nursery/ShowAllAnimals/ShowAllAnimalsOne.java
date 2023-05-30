@@ -5,13 +5,14 @@ import Models.Animals.Type;
 import View.Consoles.ConsolePrinterOne;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
 public class ShowAllAnimalsOne<T extends HumanFriend> {
-	private Map<String,HumanFriend> allAnimals;
+	private HashMap<String,HumanFriend> allAnimals;
 	
-	public ShowAllAnimalsOne(Map<String,HumanFriend> allAnimals) {
+	public ShowAllAnimalsOne(HashMap<String, HumanFriend> allAnimals) {
 		this.allAnimals = allAnimals;
 		showAll();
 	}
@@ -31,16 +32,16 @@ public class ShowAllAnimalsOne<T extends HumanFriend> {
 		ConsolePrinterOne.print("\n");
 		for (String animal:
 		     this.allAnimals.keySet()) {
-			ConsolePrinterOne.print(animal + " : \n");
+//			ConsolePrinterOne.print(animal + " : \n");
 			ConsolePrinterOne.print((allAnimals.get(animal).toString()));
 		}
 	}
 	
-	public Map<String, HumanFriend> getAllAnimals() {
+	public HashMap<String, HumanFriend> getAllAnimals() {
 		return allAnimals;
 	}
 	
-	public void setAllAnimals(Map<String, HumanFriend> allAnimals) {
+	public void setAllAnimals(HashMap<String, HumanFriend> allAnimals) {
 		this.allAnimals = allAnimals;
 	}
 }

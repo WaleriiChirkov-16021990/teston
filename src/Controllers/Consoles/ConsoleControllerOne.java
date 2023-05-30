@@ -38,7 +38,7 @@ public class ConsoleControllerOne {
 				if (nurseryOne.getAllAnimals() == null || nurseryOne.getAllAnimals().isEmpty()) {
 					ConsolePrinterOne.print("Ваш питомник пуст!");
 				} else {
-					new ShowAllAnimalsOne<HumanFriend>(nurseryOne.getAllAnimals()).showAll();
+					new ShowAllAnimalsOne<HumanFriend>(nurseryOne.getAllAnimals());
 				}
 //				readJsonFileOne.readFile();
 //				new ShowAllAnimalsOne<HumanFriend>(readJsonFileOne.getAllAnimals());

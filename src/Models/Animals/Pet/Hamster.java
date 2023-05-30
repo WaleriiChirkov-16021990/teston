@@ -82,6 +82,14 @@ public class Hamster extends Pet {
 		} else {
 			setLoves(getLoves() + 5);
 		}
-		
+	}
+	
+	@Override
+	public String toString() {
+		return super.toString() +
+				"timeMaxRun=" + timeMaxRun +
+				", distanceRun=" + distanceRun +
+				", studiedСommands=" + studiedСommands +
+				'}';
 	}
 }

@@ -58,4 +58,12 @@ public class Cat extends Pet {
 			new CommandForCatExtends<Cat>(this).scratch();
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString() +
+				"color='" + color + '\'' +
+				", studiedСommands=" + studiedСommands +
+				'}';
+	}
 }

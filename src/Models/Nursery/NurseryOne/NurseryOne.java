@@ -15,7 +15,7 @@ public class NurseryOne<T extends HumanFriend> {
 		this.allAnimals = new HashMap<>();
 	}
 	
-	public Map<String, HumanFriend> getAllAnimals() {
+	public HashMap<String, HumanFriend> getAllAnimals() {
 		return allAnimals;
 	}
 	

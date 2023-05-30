@@ -92,4 +92,15 @@ public class Camel extends PackAnimal {
 			setStockInTheHump(getStockInTheHump() - ENERGY_СONSUMPTION);
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString() +
+				"stockInTheHump=" + stockInTheHump +
+				", amountOfSaliva=" + amountOfSaliva +
+				", studiedСommands=" + studiedСommands +
+				", ENERGY_СONSUMPTION=" + ENERGY_СONSUMPTION +
+				", SPITTING_VOLUME=" + SPITTING_VOLUME +
+				'}';
+	}
 }

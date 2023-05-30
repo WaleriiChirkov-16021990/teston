@@ -64,4 +64,13 @@ public class Donkey extends PackAnimal {
 			if (getStubbornness() < 0) setStubbornness(0);
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString() +
+				"stubbornness=" + stubbornness +
+				", ENERGY_СONSUMPTION=" + ENERGY_СONSUMPTION +
+				", studiedСommands=" + studiedСommands +
+				'}';
+	}
 }

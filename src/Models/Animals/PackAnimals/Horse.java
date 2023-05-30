@@ -82,4 +82,14 @@ public class Horse extends PackAnimal {
 			setImpactForce(getImpactForce() - ENERGY_СONSUMPTION);
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString() +
+				"impactForce=" + impactForce +
+				", biteForce=" + biteForce +
+				", studiedСommands=" + studiedСommands +
+				", ENERGY_СONSUMPTION=" + ENERGY_СONSUMPTION +
+				'}';
+	}
 }
