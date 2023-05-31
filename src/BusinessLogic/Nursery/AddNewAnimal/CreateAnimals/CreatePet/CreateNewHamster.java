@@ -28,7 +28,7 @@ public class CreateNewHamster {
 	
 	private Hamster createHamster() {
 		try (Counter counter = new Counter()) {
-			
+			boolean dateFalse = false;
 			Scanner scanner = new Scanner(System.in);
 			System.out.println("Укажите имя: ");
 			String name = scanner.nextLine();
@@ -41,6 +41,7 @@ public class CreateNewHamster {
 				date2 = dateFormat.parse(date);
 			} catch (ParseException e) {
 				e.printStackTrace();
+				dateFalse = true;
 			}
 			System.out.println("введите вес");
 			String weights = scanner.next();
@@ -76,7 +77,6 @@ public class CreateNewHamster {
 			} catch (RuntimeException e) {
 				e.fillInStackTrace();
 			}
-			
 			System.out.println("Введите расстояние которое пробегает это животное? ");
 			String distanceRuns = scanner.next();
 			try {
@@ -84,13 +84,12 @@ public class CreateNewHamster {
 			} catch (RuntimeException e) {
 				e.fillInStackTrace();
 			}
-			if (name == null || weight == 0 || color == null || color.equals("") || favoriteFood.equals("") || favoriteFood.equals("") || whoIsHePlayingWith.equals("") || loves == 0 || timeMaxRun == 0 || dictanceRun == 0) {
+			if (name == null || name.equals("") || dateFalse || weight <= 0 || color == null || color.equals("") || favoriteFood.equals("") || favoriteFood.equals("") || whoIsHePlayingWith.equals("") || loves <= 0 || timeMaxRun <= 0 || dictanceRun <= 0 || energy <= 0) {
 				throw new Exception("Неправильная инициализация хомяка!");
 			} else {
 				counter.add();
 			}
 			return new Hamster("Hamster" + Counter.getCountAnimals(), name, date2, energy, weight, Type.Pet, whoIsHePlayingWith, loves, favoriteFood, favoriteToy, timeMaxRun, dictanceRun);
-			
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

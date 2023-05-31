@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="Доработал поиск + показ команд изученных животными и модуль обучения новым командам">
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/ChangeOfGender/SelectOfKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/DeleteAnimal/SelectAnimalOfKey.java" afterDir="false" />
+    <list default="true" id="1ff029e7-1af2-4ff4-b7b9-2fd793295672" name="Changes" comment="приложение готово, остались исключения и прочие проверки">
+      <change afterPath="$PROJECT_DIR$/MySQL_scripts/FiinalHomeworkHumanFriend.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/AddNewAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/AddNewAnimal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/CreateAnimals/CreateNewAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/CreateAnimals/CreateNewAnimal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/CreateAnimals/CreatePackAnimals/CreateNewCamel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/CreateAnimals/CreatePackAnimals/CreateNewCamel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/CreateAnimals/CreatePackAnimals/CreateNewDonkey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/CreateAnimals/CreatePackAnimals/CreateNewDonkey.java" afterDir="false" />
@@ -15,17 +15,8 @@
       <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/CreateAnimals/CreatePet/CreateNewCat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/CreateAnimals/CreatePet/CreateNewCat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/CreateAnimals/CreatePet/CreateNewDog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/CreateAnimals/CreatePet/CreateNewDog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/CreateAnimals/CreatePet/CreateNewHamster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AddNewAnimal/CreateAnimals/CreatePet/CreateNewHamster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/AnimalAssociation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/ChangeOfGender/AnimalAssociation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/Counter/Counter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/DeleteAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/DeleteAnimal/DeleteAnimal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/ReadDataOfLocalFile/ReadJsonFileOne.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/ShowAllAnimals/ShowAllAnimalsOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/ShowAllAnimals/ShowAllAnimalsOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/TeacherOfNewCommands/TeacherOfAnimalCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/TeacherOfNewCommands/TeacherOfAnimalCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BusinessLogic/Nursery/Counter/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BusinessLogic/Nursery/Counter/Counter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/Consoles/ConsoleControllerOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Consoles/ConsoleControllerOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBases/LocalFiles/DataNurseryOne.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Abstract/Animals/HumanFriend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Abstract/Animals/HumanFriend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/UiConsole/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UiConsole/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +59,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Валерий Чирков\IdeaProjects\final_teston\MySQL_scripts" />
       <recent name="C:\Users\Валерий Чирков\IdeaProjects\final_teston\iDiagram" />
     </key>
   </component>
@@ -206,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685460666140</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="приложение готово, остались исключения и прочие проверки">
+      <created>1685480739918</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1685480739918</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,7 +238,8 @@
     <MESSAGE value="Доработал парсер даты, введенный пользователем" />
     <MESSAGE value="Доработал с месяцем парсер даты, введенный пользователем" />
     <MESSAGE value="Доработал поиск + показ команд изученных животными и модуль обучения новым командам" />
-    <option name="LAST_COMMIT_MESSAGE" value="Доработал поиск + показ команд изученных животными и модуль обучения новым командам" />
+    <MESSAGE value="приложение готово, остались исключения и прочие проверки" />
+    <option name="LAST_COMMIT_MESSAGE" value="приложение готово, остались исключения и прочие проверки" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

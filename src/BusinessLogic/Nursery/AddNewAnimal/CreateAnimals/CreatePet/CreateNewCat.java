@@ -34,6 +34,7 @@ public class CreateNewCat {
 		String color;
 		String whoIsHePlayingWith;
 		try (Counter counter = new Counter()) {
+			boolean dataFalse = false;
 			Scanner scanner = new Scanner(System.in);
 			System.out.println("Укажите имя: ");
 			name = scanner.nextLine();
@@ -46,6 +47,7 @@ public class CreateNewCat {
 				date2 = dateFormat.parse(date);
 			} catch (ParseException e) {
 				e.printStackTrace();
+				dataFalse = true;
 			}
 			System.out.println("введите вес");
 			weights = scanner.next();
@@ -68,7 +70,7 @@ public class CreateNewCat {
 			System.out.println("Введите имя с кем любит играть кот? ");
 			whoIsHePlayingWith = scanner.next();
 			
-			if (name == null || weight == 0 || color == null || favoriteFood == null || favoriteFood.equals("") || favoriteToy == null|| favoriteToy.equals("")  || whoIsHePlayingWith == null) {
+			if (name == null || name.equals("") || dataFalse|| weight <= 0 || color == null || favoriteFood == null || favoriteFood.equals("") || favoriteToy == null|| favoriteToy.equals("")  || whoIsHePlayingWith == null) {
 				throw new Exception("неправильная инициализация котика");
 			} else {
 				counter.add();

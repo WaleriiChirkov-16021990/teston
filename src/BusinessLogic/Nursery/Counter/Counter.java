@@ -16,9 +16,6 @@ public class Counter implements AutoCloseable {
 		return countAnimals;
 	}
 	
-	public static void setCountAnimals(int countAnimals) {
-		Counter.countAnimals = countAnimals;
-	}
 	
 	/**
 	 * Closes this resource, relinquishing any underlying resources.
@@ -65,7 +62,7 @@ public class Counter implements AutoCloseable {
 	 * to make their {@code close} methods idempotent.
 	 */
 	@Override
-	public void close() {
+	public void close() throws Exception {
 		System.out.println("Объект счётчик закрыт");
 	}
 }

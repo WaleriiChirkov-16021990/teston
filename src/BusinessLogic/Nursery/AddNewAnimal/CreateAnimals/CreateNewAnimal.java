@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class CreateNewAnimal {
 	private HumanFriend humanFriend;
 	
-	public CreateNewAnimal() {
+	public CreateNewAnimal() throws Exception {
 		createNewAnimal();
 	}
 	
@@ -22,7 +22,7 @@ public class CreateNewAnimal {
 		return humanFriend;
 	}
 	
-	public void createNewAnimal() {
+	public void createNewAnimal() throws Exception{
 		Scanner scanner = new Scanner(System.in);
 		ConsolePrinterOne.print("Укажите род животного: (camel,cat ...)");
 		String genus = scanner.nextLine();
@@ -46,7 +46,7 @@ public class CreateNewAnimal {
 				humanFriend = new CreateNewHamster().getAnimal();
 				break;
 			} else {
-				ConsolePrinterOne.print("Животное такого рода нам не известно");
+				ConsolePrinterOne.print("Животное такого рода нам пока не известно");
 			}
 		}
 	}

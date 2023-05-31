@@ -6,10 +6,10 @@ import Models.Nursery.NurseryOne.NurseryOne;
 
 public class AddNewAnimal <T extends NurseryOne<HumanFriend>> {
 	private HumanFriend animal;
-	private T nusery;
+	private T nursery;
 	
-	public AddNewAnimal(T nusery) {
-		this.nusery = nusery;
+	public AddNewAnimal(T nursery) throws Exception {
+		this.nursery = nursery;
 		CreateNewAnimal create = new CreateNewAnimal();
 		this.animal = create.getHumanFriend();
 		add();
@@ -17,7 +17,7 @@ public class AddNewAnimal <T extends NurseryOne<HumanFriend>> {
 	
 	public void add() throws RuntimeException {
 		try {
-			this.nusery.getAllAnimals().put(animal.getKey() ,animal);
+			this.nursery.getAllAnimals().put(animal.getKey() ,animal);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -29,13 +29,5 @@ public class AddNewAnimal <T extends NurseryOne<HumanFriend>> {
 	
 	public void setAnimal(HumanFriend animal) {
 		this.animal = animal;
-	}
-	
-	public T getNusery() {
-		return nusery;
-	}
-	
-	public void setNusery(T nusery) {
-		this.nusery = nusery;
 	}
 }

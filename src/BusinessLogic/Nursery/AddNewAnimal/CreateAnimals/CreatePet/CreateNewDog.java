@@ -27,6 +27,7 @@ public class CreateNewDog {
 	
 	private Dog createDog() {
 		try (Counter counter = new Counter()) {
+			boolean dataFalse = false;
 			Scanner scanner = new Scanner(System.in);
 			System.out.println("Укажите имя: ");
 			String name = scanner.nextLine();
@@ -39,8 +40,8 @@ public class CreateNewDog {
 				date2 = dateFormat.parse(date);
 			} catch (ParseException e) {
 				e.printStackTrace();
+				dataFalse = true;
 			}
-			
 			System.out.println("введите вес");
 			String weights = scanner.next();
 			try {
@@ -48,7 +49,6 @@ public class CreateNewDog {
 			} catch (RuntimeException e) {
 				e.fillInStackTrace();
 			}
-			
 			System.out.println("введите цвет животного");
 			String color = scanner.next();
 			
@@ -69,7 +69,6 @@ public class CreateNewDog {
 			} catch (RuntimeException e) {
 				e.fillInStackTrace();
 			}
-			
 			System.out.println("Введите интелект это животного? 0-100");
 			String intellect = scanner.next();
 			try {
@@ -77,7 +76,7 @@ public class CreateNewDog {
 			} catch (RuntimeException e) {
 				e.fillInStackTrace();
 			}
-			if (name == null || weight == 0 || color == null || color.equals("") || favoriteFood.equals("") || favoriteFood.equals("") || whoIsHePlayingWith.equals("") || loves == 0 || intelligence == 0) {
+			if (name == null || name.equals("") || dataFalse || weight <= 0 || color == null || color.equals("") || favoriteFood.equals("") || favoriteFood.equals("") || whoIsHePlayingWith.equals("") || loves <= 0 || intelligence <= 0 || energy <= 0) {
 				throw new Exception("Неправильная инициализация собаки!");
 			} else {
 				counter.add();

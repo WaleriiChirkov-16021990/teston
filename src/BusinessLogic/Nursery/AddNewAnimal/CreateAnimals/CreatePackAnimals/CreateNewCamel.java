@@ -33,7 +33,7 @@ public class CreateNewCamel {
 		String weights;
 		String liftingW;
 		try (Counter counter = new Counter()) {
-			
+			boolean dateFalse = false;
 			Scanner scanner = new Scanner(System.in);
 			System.out.println("Укажите имя: ");
 			name = scanner.nextLine();
@@ -45,6 +45,7 @@ public class CreateNewCamel {
 				date2 = dateFormat.parse(date);
 			} catch (ParseException e) {
 				e.printStackTrace();
+				dateFalse = true;
 			}
 			System.out.println("введите вес");
 			weights = scanner.next();
@@ -60,15 +61,15 @@ public class CreateNewCamel {
 			} catch (RuntimeException e) {
 				e.fillInStackTrace();
 			}
-			if (name == null || weight == 0 || liftingWeight == 0) {
+			if (name == null || name.equals("") || weight <= 0 || liftingWeight <= 0 || dateFalse || stockInTheHump <= 0 || amountOfSaliva <= 0 || energy <= 0) {
 				throw new Exception("неправильная инициализация верблюда");
 			} else {
 				counter.add();
+				return new Camel("Camel" + Counter.getCountAnimals(), name, date2, energy, weight, Type.PackAnimal, liftingWeight, stockInTheHump, amountOfSaliva);
 			}
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
-		return new Camel("Camel" + Counter.getCountAnimals(), name, date2, energy, weight, Type.PackAnimal, liftingWeight, stockInTheHump, amountOfSaliva);
 	}
 	
 }

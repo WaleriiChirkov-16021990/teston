@@ -49,8 +49,11 @@ public class ConsoleControllerOne {
 				}
 			}
 		} catch (RuntimeException exception) {
-			ConsolePrinterOne.print(exception.getMessage());
+			exception.getMessage();
 			exception.fillInStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 }
